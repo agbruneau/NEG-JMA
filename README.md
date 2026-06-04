@@ -33,7 +33,7 @@ baptiste de 1689 (1689 LBCF).
 
 ## Le site web
 
-[`index.html`](index.html) est une page web autonome (HTML + CSS + JavaScript, sans dépendance
+[`index.html`](<Syntheses-Globales/index.html>) est une page web autonome (HTML + CSS + JavaScript, sans dépendance
 de build) qui présente l'épître à l'assemblée :
 
 - page-titre, introduction, une section par chapitre (1 à 5) et conclusion ;
@@ -43,37 +43,40 @@ de build) qui présente l'épître à l'assemblée :
 - barre de progression de lecture et révélation au défilement.
 
 Citations bibliques : **Nouvelle Édition de Genève 1979 (NEG)**. Le logo
-[`LogoEBC.avif`](LogoEBC.avif) est référencé par la page.
+[`LogoEBC.avif`](<Syntheses-Globales/LogoEBC.avif>) est référencé par la page.
 
-**Pour la consulter :** ouvrir `index.html` dans un navigateur (les polices proviennent de
+**Pour la consulter :** ouvrir `Syntheses-Globales/index.html` dans un navigateur (les polices proviennent de
 Google Fonts ; une connexion Internet améliore le rendu, mais la page reste lisible hors ligne).
 
 ---
 
 ## Recherche exégétique et série de prédication
 
-Chaque péricope dispose d'une **recherche exégétique** (`.md` source + `.pdf` rendu) et
-correspond à une **semaine de prédication** de la série « La foi qui agit ». Les douze unités
-suivent le découpage naturel de l'épître :
+Chaque péricope dispose de son **propre dossier** sous `Recherches/`, contenant la
+**recherche exégétique** (`.md` source + `.pdf` rendu) et destiné à accueillir le matériel
+de développement à venir (notes, sources, brouillons). Chaque péricope correspond à une
+**semaine de prédication** de la série « La foi qui agit ». Les douze unités suivent le
+découpage naturel de l'épître :
 
-| Sem. | Passage | Recherche exégétique | Titre de la prédication |
+| Sem. | Passage | Dossier de recherche | Titre de la prédication |
 |---|---|---|---|
-| 1 | Jacques 1.1-12 | `Recherche-Exegetique-Jacques-1-1-12` | La joie au creuset de l'épreuve |
-| 2 | Jacques 1.13-18 | `Recherche-Exegetique-Jacques-1-13-18` | Le Dieu qui ne change pas |
-| 3 | Jacques 1.19-27 | `Recherche-Exegetique-Jacques-1-19-27` | Auditeurs ou praticiens |
-| 4 | Jacques 2.1-13 | `Recherche-Exegetique-Jacques-2-1-13` | La foi sans partialité |
-| 5 | Jacques 2.14-26 | `Recherche-Exegetique-Jacques-2-14-26` | La foi qui agit *(sommet doctrinal)* |
-| 6 | Jacques 3.1-12 | `Recherche-Exegetique-Jacques-3-1-12` | Le petit membre, le grand feu |
-| 7 | Jacques 3.13-18 | `Recherche-Exegetique-Jacques-3-13-18` | Deux sagesses |
-| 8 | Jacques 4.1-10 | `Recherche-Exegetique-Jacques-4-1-10` | L'amitié du monde |
-| 9 | Jacques 4.11-17 | `Recherche-Exegetique-Jacques-4-11-17` | Si le Seigneur le veut |
-| 10 | Jacques 5.1-6 | `Recherche-Exegetique-Jacques-5-1-6` | Le cri des moissonneurs |
-| 11 | Jacques 5.7-12 | `Recherche-Exegetique-Jacques-5-7-12` | Patience jusqu'à son retour |
-| 12 | Jacques 5.13-20 | `Recherche-Exegetique-Jacques-5-13-20` | La prière qui agit |
+| 1 | Jacques 1.1-12 | [`Recherches/Jacques-1-1-12/`](<Recherches/Jacques-1-1-12/>) | La joie au creuset de l'épreuve |
+| 2 | Jacques 1.13-18 | [`Recherches/Jacques-1-13-18/`](<Recherches/Jacques-1-13-18/>) | Le Dieu qui ne change pas |
+| 3 | Jacques 1.19-27 | [`Recherches/Jacques-1-19-27/`](<Recherches/Jacques-1-19-27/>) | Auditeurs ou praticiens |
+| 4 | Jacques 2.1-13 | [`Recherches/Jacques-2-1-13/`](<Recherches/Jacques-2-1-13/>) | La foi sans partialité |
+| 5 | Jacques 2.14-26 | [`Recherches/Jacques-2-14-26/`](<Recherches/Jacques-2-14-26/>) | La foi qui agit *(sommet doctrinal)* |
+| 6 | Jacques 3.1-12 | [`Recherches/Jacques-3-1-12/`](<Recherches/Jacques-3-1-12/>) | Le petit membre, le grand feu |
+| 7 | Jacques 3.13-18 | [`Recherches/Jacques-3-13-18/`](<Recherches/Jacques-3-13-18/>) | Deux sagesses |
+| 8 | Jacques 4.1-10 | [`Recherches/Jacques-4-1-10/`](<Recherches/Jacques-4-1-10/>) | L'amitié du monde |
+| 9 | Jacques 4.11-17 | [`Recherches/Jacques-4-11-17/`](<Recherches/Jacques-4-11-17/>) | Si le Seigneur le veut |
+| 10 | Jacques 5.1-6 | [`Recherches/Jacques-5-1-6/`](<Recherches/Jacques-5-1-6/>) | Le cri des moissonneurs |
+| 11 | Jacques 5.7-12 | [`Recherches/Jacques-5-7-12/`](<Recherches/Jacques-5-7-12/>) | Patience jusqu'à son retour |
+| 12 | Jacques 5.13-20 | [`Recherches/Jacques-5-13-20/`](<Recherches/Jacques-5-13-20/>) | La prière qui agit |
 
 Le plan détaillé de la série (idées maîtresses, arc narratif, notes pastorales) se trouve dans
-[`<Série Global.md>`](<Série Global.md>), et une recherche couvrant l'épître d'un seul tenant
-(Jacques 1.1 à 5.20) dans [`<Recherche Global.md>`](<Recherche Global.md>) — utile pour la
+[`Syntheses-Globales/Série Global.md`](<Syntheses-Globales/Série Global.md>), et une recherche
+couvrant l'épître d'un seul tenant (Jacques 1.1 à 5.20) dans
+[`Syntheses-Globales/Recherche Global.md`](<Syntheses-Globales/Recherche Global.md>) — utile pour la
 prédication d'introduction.
 
 ### Gabarit d'une recherche exégétique
@@ -98,9 +101,9 @@ canonicité, style et plans de l'épître :
 
 | Fichier | Source |
 |---|---|
-| [`Intro - MacArthur.md`](<Intro - MacArthur.md>) | *La Sainte Bible avec commentaires de John MacArthur* (Société Biblique de Genève, 2006) |
-| [`Intro - Chercheur biblique.md`](<Intro - Chercheur biblique.md>) | J. Ronald Blue, *Commentaire biblique du chercheur, Nouveau Testament* (Publications Chrétiennes, 2013) |
-| [`Intro - NBS.md`](<Intro - NBS.md>) | Notes d'étude de la *Nouvelle Bible Segond* (Société Biblique Française) |
+| [`Intro - MacArthur.md`](<Syntheses-Globales/Intro - MacArthur.md>) | *La Sainte Bible avec commentaires de John MacArthur* (Société Biblique de Genève, 2006) |
+| [`Intro - Chercheur biblique.md`](<Syntheses-Globales/Intro - Chercheur biblique.md>) | J. Ronald Blue, *Commentaire biblique du chercheur, Nouveau Testament* (Publications Chrétiennes, 2013) |
+| [`Intro - NBS.md`](<Syntheses-Globales/Intro - NBS.md>) | Notes d'étude de la *Nouvelle Bible Segond* (Société Biblique Française) |
 
 ---
 
@@ -108,20 +111,28 @@ canonicité, style et plans de l'épître :
 
 ```
 .
-├── index.html                              Site de présentation de l'épître (page unique)
-├── LogoEBC.avif                            Logo de l'Église Baptiste de Charlesbourg
+├── README.md
 │
-├── Intro - MacArthur.md                    Introductions de référence
-├── Intro - Chercheur biblique.md
-├── Intro - NBS.md
+├── Recherches/                             Une recherche exégétique par péricope
+│   ├── Jacques-1-1-12/
+│   │   └── Recherche-Exegetique-Jacques-1-1-12.md / .pdf
+│   ├── Jacques-1-13-18/
+│   │   └── …
+│   └── …                                   (12 dossiers, un par semaine de prédication)
 │
-├── Recherche Global.md / .pdf              Recherche exégétique sur Jacques 1.1 à 5.20
-├── Série Global.md / .pdf                  Plan de la série de prédication (12 semaines)
-│
-└── Recherche-Exegetique-Jacques-*.md / .pdf   12 recherches, une par péricope
+└── Syntheses-Globales/                     Synthèses, introductions et site de présentation
+    ├── index.html                          Site de présentation de l'épître (page unique)
+    ├── LogoEBC.avif                        Logo de l'Église Baptiste de Charlesbourg
+    ├── Intro - MacArthur.md                Introductions de référence
+    ├── Intro - Chercheur biblique.md
+    ├── Intro - NBS.md
+    ├── Recherche Global.md / .pdf          Recherche exégétique sur Jacques 1.1 à 5.20
+    └── Série Global.md / .pdf              Plan de la série de prédication (12 semaines)
 ```
 
-Pour chaque recherche, le `.md` est la source rédigée et le `.pdf` en est l'export mis en page.
+Chaque péricope possède son dossier dédié sous `Recherches/`, ce qui permet d'y développer
+indépendamment notes, sources et révisions. Pour chaque recherche, le `.md` est la source
+rédigée et le `.pdf` en est l'export mis en page.
 Le fichier `ruvector.db` (base de l'outillage local) est exclu du dépôt via
 [`.gitignore`](.gitignore).
 
