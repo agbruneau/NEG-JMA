@@ -3,3 +3,6 @@ ruvector.db
 
 # Copies de sauvegarde Windows (« - Copie »)
 * - Copie*
+
+# Outillage local Claude Code (config propre à la machine, verrous transitoires)
+.claude/
