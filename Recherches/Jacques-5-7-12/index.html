@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jacques 5.7-12 · La patience de l'espérance — Recherche exégétique</title>
+<meta name="description" content="Recherche exégétique de Jacques 5.7-12 : contexte, arrière-plan historique, étude des mots grecs, apports des commentateurs, renvois bibliques, thèmes théologiques et pistes de réflexion sur la patience qui attend l'avènement du Seigneur. Église Baptiste de Charlesbourg.">
+<meta name="author" content="André-Guy Bruneau · Église Baptiste de Charlesbourg">
+<style>
+  :root{
+    /* ---- Palette Noir + orange ---- */
+    --nuit:#0a0a0a;        /* fond noir profond */
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;      /* panneaux */
+    --encre:#f3f0ec;       /* texte principal, contraste élevé */
+    --encre-doux:#c9c2ba;  /* texte secondaire, demeure lisible */
+    --or:#e8843c;          /* orange chaud (accent principal) */
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;     /* ambre lumineux (accent secondaire) */
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    /* Largeur de contenu proportionnelle : ~80% de l'écran sur grand écran,
+       plancher 58rem pour que mobile/tablette gardent une lecture confortable */
+    --max:max(58rem,80vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    /* Lecture confortable pour personnes aînées : grands caractères, interligne aéré */
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+
+  /* Grain de parchemin, très discret pour ne pas gêner la lecture */
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Voile sombre sur les bords, pour la profondeur */
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  /* ---- Barre de progression ---- */
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  /* ---- Navigation ---- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  /* Barre de progression de lecture, intégrée au bas de la navigation */
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{
+    flex:none;display:block;
+  }
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  /* ---- Hero / page-titre ---- */
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3.8rem,8vw + 1rem,9rem);
+    line-height:1;letter-spacing:.04em;margin:0;
+    /* Espace bas/côtés pour que les jambages du J et du q ne soient pas rognés par background-clip:text */
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.5rem,1.1rem + 1.5vw,2.25rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+
+  /* Entrée orchestrée du hero (douce) */
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.15s;}
+  .hero__title{animation-delay:.3s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+  .hero__meta{animation-delay:1.3s;}
+
+  /* ---- Sections ---- */
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3.5rem,9vw,7rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.8rem;}
+  .sec-num{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(2.8rem,2rem + 3vw,4.2rem);line-height:1;
+    color:var(--or);letter-spacing:.05em;margin-bottom:.4rem;
+    filter:drop-shadow(0 0 22px rgba(232,132,60,.28));
+  }
+  .sec-num::before,.sec-num::after{
+    content:"";width:clamp(1.6rem,6vw,3rem);height:1px;
+    background:linear-gradient(90deg,transparent,var(--filet-fort));
+  }
+  .sec-num::after{background:linear-gradient(90deg,var(--filet-fort),transparent);}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--encre);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+  .ref{
+    margin:1rem 0 0;font-size:.92rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  .lead{
+    font-size:1.22em;line-height:1.72;color:#faf3ec;
+    font-weight:500;
+    border-left:3px solid var(--or);
+    padding-left:1.3rem;margin:0 0 2.2rem;
+    text-wrap:pretty;
+  }
+  .section p{margin:0 0 1.45rem;text-wrap:pretty;}
+  .section .body p:first-of-type::first-letter{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    float:left;font-size:3.6em;line-height:.66;
+    padding:.06em .14em 0 0;margin-top:.04em;
+    color:var(--or-clair);
+    text-shadow:0 0 22px rgba(232,132,60,.32);
+  }
+
+  /* ---- Points de forme structurés (repérage rapide) ---- */
+  .points{list-style:none;margin:0 0 2.2rem;padding:0;}
+  .points li{
+    position:relative;margin:0 0 1.5rem;padding-left:2rem;
+    text-wrap:pretty;
+  }
+  .points li:last-child{margin-bottom:0;}
+  .points li::before{
+    content:"\25C6";position:absolute;left:.2rem;top:.55em;
+    font-size:.6em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .points b{color:var(--or-clair);font-weight:600;}
+
+  /* ---- Texte souligné (mise en évidence) ; ajouter .italique pour l'italique ---- */
+  .surligne{
+    text-decoration:underline;
+    text-decoration-color:var(--or);
+    text-decoration-thickness:.08em;
+    text-underline-offset:.18em;
+  }
+  .surligne.italique{font-style:italic;}
+
+  /* ---- Texte justifié (lecture confortable, gauche et droite) ---- */
+  .lead,.points li{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+
+  /* ---- Versets ---- */
+  .verses{margin:2.4rem 0;}
+  .verse{
+    position:relative;margin:0 0 1.1rem;
+    padding:1.3rem 1.4rem 1.3rem 1.6rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 5px 5px 0;
+    transition:border-left-color .3s,transform .3s,background .3s;
+  }
+  .verse:hover{border-left-color:var(--or-clair);transform:translateX(3px);}
+  .verse__text{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.25em;line-height:1.55;color:var(--encre);margin:0;
+  }
+  .verse__text::before{content:"\201C";color:var(--or);font-size:1.1em;}
+  .verse__text::after{content:"\201D";color:var(--or);font-size:1.1em;}
+  .verse__ref{
+    display:block;margin-top:.8rem;
+    font-family:"EB Garamond",serif;font-style:normal;
+    font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--or);
+  }
+
+  /* ---- Séparateur ---- */
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  /* Variantes intro / conclusion */
+  .section--intro .sec-title,.section--conclusion .sec-title{color:var(--or-clair);}
+
+  /* ---- Pied de page ---- */
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  /* ---- Révélation au défilement (groupes de contenu en cascade douce) ---- */
+  .reveal > *{
+    opacity:0;transform:translateY(16px);
+    transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in > *{opacity:1;transform:none;}
+  .reveal.in > *:nth-child(1){transition-delay:.04s;}
+  .reveal.in > *:nth-child(2){transition-delay:.13s;}
+  .reveal.in > *:nth-child(3){transition-delay:.22s;}
+  .reveal.in > *:nth-child(4){transition-delay:.31s;}
+  .reveal.in > *:nth-child(5){transition-delay:.40s;}
+  .reveal.in > *:nth-child(6){transition-delay:.49s;}
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+    .lead{padding-left:1rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal > *{opacity:1;transform:none;transition:none;}
+    .scrollcue{animation:none;}
+    .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+
+  /* ============================================================
+     COMPOSANTS PROPRES À LA PAGE DE RECHERCHE
+     (s'ajoutent au gabarit, dans le même langage visuel)
+     ============================================================ */
+
+  /* Titre-héros thématique (plus long) + marque de nav (référence) */
+  .hero__title{font-size:clamp(3rem,5vw + 1.4rem,6rem);text-wrap:balance;}
+  .nav__brand{font-size:clamp(1.05rem,.9rem + .55vw,1.4rem);letter-spacing:.08em;}
+  .hero__meta{
+    margin-top:1.4rem;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  /* ---- Tableau des mots-clés ---- */
+  .table-wrap{
+    margin:2.4rem 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    border:1px solid var(--filet);border-radius:6px;
+  }
+  .mots{border-collapse:collapse;width:100%;min-width:52rem;}
+  .mots th,.mots td{
+    padding:1rem 1.15rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid var(--filet);
+  }
+  .mots thead th{
+    background:var(--nuit-2);
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--or);border-bottom:1px solid var(--filet-fort);
+    white-space:nowrap;
+  }
+  .mots tbody tr:last-child td{border-bottom:none;}
+  .mots tbody tr:hover{background:rgba(232,132,60,.045);}
+  .mots td{font-size:.98rem;line-height:1.6;color:var(--encre-doux);}
+  .mot-fr{display:block;font-weight:600;color:var(--encre);}
+  .mot-gr{
+    display:block;margin-top:.25rem;
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.12em;color:var(--or-clair);
+  }
+  .col-sens{min-width:12rem;color:var(--encre);}
+  .trad{display:flex;flex-direction:column;gap:.3rem;font-size:.84rem;white-space:nowrap;}
+  .trad b{color:var(--or-clair);font-weight:600;letter-spacing:.03em;}
+
+  /* ---- Renvois / passages parallèles ---- */
+  .renvois{display:grid;gap:1.1rem;margin:2.4rem 0 0;grid-template-columns:1fr;}
+  @media (min-width:48rem){.renvois{grid-template-columns:1fr 1fr;}}
+  .renvoi{
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;padding:1.1rem 1.3rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.015));
+  }
+  .renvoi__head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:.7rem;flex-wrap:wrap;margin-bottom:.55rem;
+  }
+  .renvoi__ref{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.2rem;color:var(--or-clair);letter-spacing:.02em;
+  }
+  .renvoi__tag{
+    font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--or);border:1px solid var(--filet-fort);
+    border-radius:999px;padding:.22rem .65rem;white-space:nowrap;
+  }
+  .renvoi__desc{margin:0;font-size:.95rem;line-height:1.6;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+
+  /* ---- Thèmes théologiques (deux volets : texte / assemblée) ---- */
+  .theme{
+    margin:0;padding:1.6rem 1.7rem 1.5rem;
+    border:1px solid var(--filet);border-radius:9px;
+    background:linear-gradient(180deg,rgba(27,27,27,.55),rgba(18,18,18,.35));
+  }
+  .theme__title{
+    display:flex;align-items:center;gap:.75rem;margin:0 0 1.2rem;
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.4rem,1.1rem + .9vw,1.8rem);color:var(--or-clair);
+  }
+  .theme__title::before{
+    content:"\25C6";font-size:.52em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .theme__grid{display:grid;gap:1.2rem;}
+  @media (min-width:47rem){.theme__grid{grid-template-columns:1fr 1fr;align-items:start;}}
+  .theme__label{
+    display:flex;align-items:center;gap:.6rem;margin:0 0 .55rem;
+    font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);
+  }
+  .theme__label::after{content:"";flex:1;height:1px;background:var(--filet);}
+  .theme__part p{margin:0;font-size:.95rem;line-height:1.64;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+  .theme__part--app{
+    padding:1.05rem 1.15rem;border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),transparent);
+  }
+
+  /* ---- Pistes de réflexion (questions numérotées) ---- */
+  .questions{list-style:none;counter-reset:q;margin:2.4rem 0 0;padding:0;display:grid;gap:1.5rem;}
+  .questions li{
+    position:relative;counter-increment:q;padding-left:3.6rem;
+    text-align:justify;-webkit-hyphens:auto;hyphens:auto;
+  }
+  .questions li::before{
+    content:counter(q);position:absolute;left:0;top:-.15rem;
+    width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;
+    font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.35rem;
+    color:var(--or);border:1px solid var(--filet-fort);border-radius:50%;
+    background:rgba(232,132,60,.06);
+    filter:drop-shadow(0 0 10px rgba(232,132,60,.18));
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg — haut de page">
+    <img src="../../Syntheses-Globales/LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
+  <span class="nav__brand">Jacques 5.7-12</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#contexte">Contexte</a>
+    <a href="#arriere-plan">Arrière-plan</a>
+    <a href="#mots-cles">Mots-clés</a>
+    <a href="#commentateurs">Commentateurs</a>
+    <a href="#renvois">Parallèles</a>
+    <a href="#themes">Thèmes</a>
+    <a href="#reflexion">Réflexion</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p class="hero__kicker">Recherche · Jacques 5.7-12</p>
+    <h1 class="hero__title">La patience de l'espérance</h1>
+    <div class="ornament" aria-hidden="true"><span>◆</span></div>
+    <p class="hero__verse">
+      <span class="q">«</span>&nbsp;Soyez donc patients, frères, jusqu'à l'avènement du Seigneur. Voici, le cultivateur attend le précieux fruit de la terre, prenant patience à son égard, jusqu'à ce qu'il ait reçu les pluies de la première et de l'arrière-saison.&nbsp;<span class="q">»</span>
+    </p>
+    <p class="hero__ref">Jacques 5.7 · NEG</p>
+    <p class="hero__series">Série : <b>La foi qui agit</b></p>
+    <p class="hero__meta">Recherche exégétique · 30 mai 2026 · AGB · EBC</p>
+    <div class="scrollcue" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- ============ CONTEXTE DU PASSAGE ============ -->
+  <article class="section section--intro reveal" id="contexte">
+    <header class="sec-head">
+      <p class="kicker">Le passage</p>
+      <h2 class="sec-title">Contexte du passage</h2>
+      <p class="ref">Jacques 5.7-12</p>
+    </header>
+    <div class="verses">
+      <figure class="verse">
+        <p class="verse__text">Soyez donc patients, frères, jusqu'à l'avènement du Seigneur. Voici, le cultivateur attend le précieux fruit de la terre, prenant patience à son égard, jusqu'à ce qu'il ait reçu les pluies de la première et de l'arrière-saison.</p>
+        <cite class="verse__ref">Jacques 5.7 · NEG</cite>
+      </figure>
+      <figure class="verse">
+        <p class="verse__text">Vous aussi, soyez patients, affermissez vos cœurs, car l'avènement du Seigneur est proche.</p>
+        <cite class="verse__ref">Jacques 5.8 · NEG</cite>
+      </figure>
+    </div>
+    <p class="lead">La péricope s'ouvre sur un «&nbsp;donc&nbsp;» (5.7) qui la rattache directement à l'oracle de jugement contre les riches oppresseurs (5.1-6) : sa réponse à l'injustice subie n'est ni la révolte ni la résignation, mais la patience tournée vers l'avènement du Seigneur.</p>
+    <div class="body">
+      <p>Jacques vient de prononcer un «&nbsp;malheur&nbsp;» prophétique sur ceux qui ont thésaurisé dans les derniers jours, retenu le salaire des ouvriers et condamné le juste sans résistance (5.4-6). La question qui surgit aussitôt est pastorale : que doivent faire, en attendant, les pauvres et les opprimés qui subissent cette injustice sans pouvoir se faire justice eux-mêmes? La réponse de Jacques tourne tout entière vers un événement précis, «&nbsp;l'avènement du Seigneur&nbsp;». Le Juge que les riches devront affronter (5.5, «&nbsp;un jour de carnage&nbsp;») est le même dont la venue soutient l'espérance des affligés (5.7-8) : le jugement annoncé contre les uns est le salut attendu par les autres.</p>
+      <p>Sur le plan de la composition, 5.7-12 forme la charnière entre la dénonciation sociale (5.1-6) et la section finale sur la prière et la restauration communautaire (5.13-20). Le mot-clé est <i>makrothymeo</i>, «&nbsp;patienter, prendre patience&nbsp;», répété en inclusion aux versets 7 et 8, encadrant l'image centrale du cultivateur. Jacques accumule trois figures d'endurance : le cultivateur qui attend la pluie (5.7), les prophètes qui ont souffert (5.10) et Job (5.11). Le verset 9, «&nbsp;ne vous plaignez pas les uns des autres&nbsp;», montre que la pression de la souffrance extérieure menace de se retourner en aigreur intérieure contre les frères : la patience eschatologique a un versant horizontal, dans la vie de l'assemblée.</p>
+      <p>Le verset 12, «&nbsp;avant toutes choses, mes frères, ne jurez pas&nbsp;», pose une difficulté de structure : il semble isolé. Mais il prolonge le thème de la parole maîtrisée déjà développé en 3.1-12 et 4.11-12, et s'accorde au contexte de l'épreuve : sous la pression, la langue jure, exagère et invoque le ciel pour se cautionner. La parole simple et vraie du croyant qui attend le Juge contraste avec les serments multipliés de celui qui ne craint pas ce Juge. Loin d'être un appendice, le verset scelle la section : celui qui attend patiemment le retour du Seigneur n'a besoin ni de murmurer contre son frère (5.9) ni de garantir sa parole par des serments (5.12); son «&nbsp;oui&nbsp;» suffit, parce que le Juge se tient à la porte.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ARRIÈRE-PLAN HISTORIQUE ET CULTUREL ============ -->
+  <article class="section reveal" id="arriere-plan">
+    <header class="sec-head">
+      <p class="kicker">Monde du premier siècle</p>
+      <h2 class="sec-title">Arrière-plan historique et culturel</h2>
+      <p class="ref">Jacques 5.7 · 5.9 · 5.12</p>
+    </header>
+    <p class="lead">L'image du cultivateur (5.7) n'est pas décorative : elle suppose le calendrier agricole de la Palestine, que les premiers lecteurs connaissaient d'instinct, et trois réalités du premier siècle échappent au lecteur moderne.</p>
+    <div class="body">
+      <p>Jacques précise «&nbsp;la pluie de l'automne et celle du printemps&nbsp;» (les pluies précoces et tardives). La pluie précoce, vers octobre et novembre, ramollissait le sol durci par l'été pour permettre les semailles; la pluie tardive, vers mars et avril, gonflait le grain juste avant la moisson. Entre les deux s'étendaient de longs mois où le cultivateur ne pouvait rien faire que d'attendre, dépendant entièrement d'un ciel qu'il ne contrôlait pas.</p>
+    </div>
+    <ul class="points">
+      <li><b>L'attente du cultivateur.</b> L'auditeur saisissait une double pointe que le lecteur moderne manque : la patience du cultivateur (5.7) n'est pas passivité, c'est une attente laborieuse et confiante envers un don que Dieu seul accorde au temps fixé (comparer Deutéronome 11.14; Joël 2.23). La souffrance du croyant a, elle aussi, ses saisons ordonnées par Dieu.</li>
+      <li><b>Le juge à la porte.</b> Le vocabulaire judiciaire renvoie aux réalités de 5.1-6 : des journaliers et petits paysans pris dans une économie agraire où les grands propriétaires retenaient les salaires et traînaient les pauvres devant des tribunaux qu'ils contrôlaient (2.6). Quand Jacques dit que «&nbsp;le juge se tient à la porte&nbsp;» (5.9), il déplace le tribunal : le vrai Magistrat n'est pas le riche local, mais le Seigneur qui revient. L'image évoque concrètement le magistrat sur le point de franchir le seuil de la salle d'audience, imminence perçue comme une menace pour les oppresseurs et une consolation pour les opprimés.</li>
+      <li><b>Le serment casuistique.</b> La pratique du serment (5.12) avait dérivé en un système de casuistique : la tradition rabbinique distinguait les serments contraignants des serments non contraignants selon la formule employée; jurer «&nbsp;par Jérusalem&nbsp;» ou «&nbsp;par le ciel&nbsp;» plutôt que par le nom divin permettait prétendument de se délier de sa parole sans parjure formel (voir Matthieu 23.16-22). Le serment était devenu un instrument de mensonge raffiné. Jacques, comme son Maître en Matthieu 5.33-37, abolit ce système : pour qui vit devant le Juge qui se tient à la porte, toute parole est déjà proférée en présence de Dieu; le «&nbsp;oui&nbsp;» doit être oui.</li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ÉTUDE DES MOTS-CLÉS ============ -->
+  <article class="section reveal" id="mots-cles">
+    <header class="sec-head">
+      <p class="kicker">Vocabulaire</p>
+      <h2 class="sec-title">Étude des mots-clés</h2>
+      <p class="ref">Cinq termes grecs</p>
+    </header>
+    <p class="lead">Cinq mots portent le poids théologique de la péricope. Les isoler, c'est tenir le fil de l'argument de Jacques : de la longanimité envers les personnes (<i>makrothymeo</i>) à l'endurance sous la charge (<i>hypomone</i>), de l'avènement attendu (<i>parousia</i>) qui est déjà proche (<i>eggizo</i>) jusqu'au cœur miséricordieux de Dieu (<i>polysplagchnos kai oiktirmon</i>) qui fonde toute la patience.</p>
+    <div class="table-wrap">
+      <table class="mots">
+        <thead>
+          <tr>
+            <th scope="col">Français · translit.</th>
+            <th scope="col">Sens littéral</th>
+            <th scope="col">Champ sémantique</th>
+            <th scope="col">Traductions comparées</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="mot-fr">patientez / prenez patience</span><span class="mot-gr">makrothymeo</span></th>
+            <td class="col-sens">être à la longue colère, différer longuement la riposte; littéralement «&nbsp;avoir l'âme longue&nbsp;», endurer sans éclater</td>
+            <td>Le terme décrit la patience envers les personnes et les circonstances, la longanimité qui supporte sans se venger ni désespérer. Répété quatre fois dans la péricope (5.7 deux fois, 5.8, 5.10). C'est un attribut de Dieu lui-même, «&nbsp;lent à la colère&nbsp;» (Exode 34.6, LXX), et de sa patience qui attend la repentance (Romains 2.4; 2 Pierre 3.9). Paul en fait un fruit de l'Esprit (Galates 5.22) et la première note de l'amour (1 Corinthiens 13.4). À distinguer de <i>hypomone</i>, l'endurance sous une charge.</td>
+            <td><span class="trad"><span><b>S21</b> patientez / prenez patience</span><span><b>NEG79</b> soyez patients / patientez</span><span><b>Darby</b> usez de patience / soyez patients</span><span><b>LSG</b> soyez patients / prenez patience</span><span><b>KJF</b> soyez patients / ayez patience</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">l'avènement / la venue</span><span class="mot-gr">parousia</span></th>
+            <td class="col-sens">présence, arrivée, venue; au sens technique, l'arrivée officielle d'un souverain ou d'un dignitaire en visite</td>
+            <td>Dans le grec profane, la <i>parousia</i> désignait l'entrée solennelle d'un roi ou d'un empereur dans une cité, accueilli avec honneurs. Le Nouveau Testament l'applique au retour glorieux de Christ (Matthieu 24.3,27,37; 1 Thessaloniciens 4.15; 2 Pierre 3.4; 1 Jean 2.28). En Jacques 5.7-8, il s'agit du retour personnel et visible du Seigneur Jésus, fondement de la patience du croyant. Le mot porte à la fois la promesse de salut pour les affligés et la perspective du jugement pour les oppresseurs.</td>
+            <td><span class="trad"><span><b>S21</b> le retour / l'avènement</span><span><b>NEG79</b> l'avènement</span><span><b>Darby</b> la venue</span><span><b>LSG</b> l'avènement</span><span><b>KJF</b> la venue</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">est proche / s'est approché</span><span class="mot-gr">eggizo</span></th>
+            <td class="col-sens">s'approcher, venir près; au parfait (<i>eggiken</i>), exprime un état acquis : il s'est approché et se tient désormais proche</td>
+            <td>Le même verbe annonce que «&nbsp;le royaume de Dieu s'est approché&nbsp;» (Marc 1.15) et que «&nbsp;la fin de toutes choses est proche&nbsp;» (1 Pierre 4.7). En Jacques 5.8, le parfait souligne non un compte à rebours calculable, mais une proximité qualitative et permanente : le retour est l'horizon imminent qui qualifie tout le temps de l'Église. Le parallèle du verset 9, «&nbsp;le juge se tient (parfait, <i>hesteken</i>) à la porte&nbsp;», redouble cette imminence par une image spatiale.</td>
+            <td><span class="trad"><span><b>S21</b> est proche</span><span><b>NEG79</b> est proche</span><span><b>Darby</b> s'est approchée</span><span><b>LSG</b> est proche</span><span><b>KJF</b> s'approche</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">la persévérance / la patience d'endurance</span><span class="mot-gr">hypomone</span></th>
+            <td class="col-sens">le fait de demeurer sous une charge sans plier; endurance ferme et active</td>
+            <td>À distinguer de <i>makrothymeo</i> (patience envers les personnes) : <i>hypomone</i> est l'endurance tenace sous le poids des circonstances. C'est la vertu produite par l'épreuve (Jacques 1.3-4; Romains 5.3-4), celle de Job «&nbsp;dont vous avez entendu parler&nbsp;» (5.11), et celle que réclame la course chrétienne (Hébreux 12.1; Apocalypse 14.12). Le substantif et le verbe apparenté (<i>makarizomen tous hypomeinantas</i>, «&nbsp;nous disons bienheureux ceux qui ont tenu bon&nbsp;») fondent en 5.11 la béatitude de la persévérance, soutien de la doctrine de la persévérance des saints.</td>
+            <td><span class="trad"><span><b>S21</b> la persévérance / persévère</span><span><b>NEG79</b> la patience / ont souffert avec patience</span><span><b>Darby</b> la patience / ont enduré</span><span><b>LSG</b> la patience / ont souffert avec patience</span><span><b>KJF</b> la patience / endurent</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">plein de compassion / miséricordieux</span><span class="mot-gr">polysplagchnos kai oiktirmon</span></th>
+            <td class="col-sens"><i>polysplagchnos</i> : littéralement «&nbsp;aux entrailles abondantes&nbsp;», très compatissant; <i>oiktirmon</i> : miséricordieux, qui a pitié</td>
+            <td><i>Polysplagchnos</i> est un hapax du Nouveau Testament, forgé sur <i>splagchna</i>, les entrailles, siège biblique de la compassion. Couplé à <i>oiktirmon</i>, il reprend la formule d'alliance de l'Ancien Testament qui révèle le caractère de l'Éternel : «&nbsp;miséricordieux et compatissant, lent à la colère et riche en bonté&nbsp;» (Exode 34.6; Psaume 103.8; 111.4). En 5.11, Jacques fonde la patience du croyant non sur un stoïcisme abstrait, mais sur la connaissance du «&nbsp;but&nbsp;» (<i>telos</i>) que le Seigneur accorda à Job : la fin révèle le cœur d'un Dieu dont les entrailles sont pleines de pitié.</td>
+            <td><span class="trad"><span><b>S21</b> plein de tendresse et de compassion</span><span><b>NEG79</b> plein de miséricorde et de compassion</span><span><b>Darby</b> plein de compassion et miséricordieux</span><span><b>LSG</b> plein de miséricorde et de compassion</span><span><b>KJF</b> très compatissant, et de tendre miséricorde</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ APPORTS DES COMMENTATEURS ============ -->
+  <article class="section reveal" id="commentateurs">
+    <header class="sec-head">
+      <p class="kicker">Tradition réformée</p>
+      <h2 class="sec-title">Apports des commentateurs</h2>
+      <p class="ref">Jacques 5.7-11</p>
+    </header>
+    <p class="lead">La question interprétative principale de la péricope est celle de l'imminence : en quel sens «&nbsp;l'avènement du Seigneur est proche&nbsp;» et «&nbsp;le juge se tient à la porte&nbsp;» (5.8-9), alors que vingt siècles ont passé? Jacques n'a-t-il pas annoncé un retour pour sa propre génération, qui n'est pas venu?</p>
+    <div class="body">
+      <p>La tradition réformée, lue ici à travers MacArthur, répond que l'imminence biblique n'est pas un calcul chronologique mais une qualité de l'attente : le retour de Christ est le prochain grand événement de l'histoire du salut, suspendu au-dessus de chaque génération, sans signe préalable qui le retarderait. La patience commandée n'est donc pas l'attente d'une date, mais la vie tendue vers un Maître qui peut paraître à tout instant. Comme le cultivateur ne peut hâter la pluie mais travaille en l'attendant, le croyant ne peut hâter le retour mais vit déjà sous son regard.</p>
+    </div>
+    <ul class="points">
+      <li><b>John MacArthur.</b> Dans la tradition expositive, MacArthur insiste sur le contraste entre les deux patiences que distingue le grec : <i>makrothymia</i>, la longanimité envers les personnes, notamment les oppresseurs que l'on renonce à punir soi-même (5.7-9), et <i>hypomone</i>, l'endurance tenace sous les circonstances, illustrée par Job (5.11). Le croyant ne se venge pas, parce qu'il remet le jugement au Juge qui vient; il ne plie pas, parce qu'il connaît le but miséricordieux que Dieu accorde à la fin. MacArthur souligne que le verset 9 déplace le danger : sous la pression de l'injustice, la tentation n'est pas seulement de haïr l'oppresseur, mais de murmurer contre le frère, de retourner contre l'assemblée l'aigreur née de la souffrance. La même imminence qui console (5.8) avertit (5.9).</li>
+      <li><b>MacArthur et la confession de 1689.</b> C'est sur le terrain de l'eschatologie qu'il faut nommer honnêtement la divergence entre la lentille prémillénariste de MacArthur et la Confession de 1689. MacArthur lit la <i>parousia</i> de 5.7-8 dans son cadre dispensationaliste et prémillénariste : un retour distinct du royaume millénaire à venir, et il prolonge cette grille en voyant dans «&nbsp;les douze tribus&nbsp;» de 1.1 des croyants juifs au destin national distinct de l'Église. La tradition confessionnelle de 1689, largement covenantale et amillénariste (chapitre 32, Du jugement dernier), retient avec une égale fermeté l'imminence et la certitude du retour personnel et visible de Christ, mais sans cet échafaudage de dispensations : elle voit dans la dispersion des «&nbsp;douze tribus&nbsp;» l'image du peuple unique de la nouvelle alliance, l'Israël de Dieu (Galates 6.16), héritier des promesses en Christ. Les deux positions confessent ensemble le retour glorieux, le jugement et la consolation des affligés; elles divergent sur l'articulation d'Israël et de l'Église et sur la place d'un millénium terrestre. Pour cette péricope, l'enjeu pratique, la patience fondée sur l'imminence, demeure commun aux deux lectures.</li>
+      <li><b>Calvin.</b> Calvin lit la patience de Jacques comme l'antidote à la fois au désespoir et à la vengeance : puisque Dieu se réserve le jugement, l'opprimé n'a pas à se faire justice, et puisque le Seigneur vient, il n'a pas à désespérer. L'exemple du cultivateur enseigne la dépendance : nous attendons de Dieu le fruit comme le paysan attend la pluie, sans pouvoir l'arracher. Sur le serment (5.12), Calvin, suivi par la tradition réformée et la 1689 (chapitre 23, Des serments et des vœux licites), précise que Jacques ne condamne pas le serment solennel et licite, prêté devant le magistrat ou pour confirmer une chose grave, que l'Écriture pratique et que Dieu jure (Hébreux 6.13-17). Ce que Jacques interdit, c'est le serment léger, habituel, casuistique, qui invoque le ciel pour cautionner une parole devenue suspecte.</li>
+      <li><b>Spurgeon.</b> Dans la ligne pastorale, Spurgeon fait de Job le grand réconfort de l'affligé : non pas un homme qui souffrit sans murmure, car Job se plaignit amèrement, mais un homme dont la persévérance tint bon jusqu'à ce que Dieu révèle «&nbsp;le but&nbsp;» (<i>telos</i>), une fin pleine de tendresse et de compassion. Spurgeon souligne que la patience biblique n'exige pas l'absence de larmes, mais le refus de lâcher la foi.</li>
+      <li><b>Schreiner et les puritains.</b> Thomas Schreiner met en relief la structure : la péricope est encadrée par l'appel à la patience (5.7-11) et culmine non dans un calcul des temps mais dans la révélation du caractère de Dieu (5.11), <i>polysplagchnos kai oiktirmon</i>, repris de l'Ancien Testament. La persévérance chrétienne se fonde sur qui est Dieu, non sur une maîtrise de l'avenir. Les puritains, enfin, lisaient ces versets comme une école de l'espérance : l'attente du retour n'est pas un exercice de spéculation, mais une discipline du cœur qui purifie, console et garde de l'amertume celui qui souffre l'injustice.</li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ RENVOIS ET PASSAGES PARALLÈLES ============ -->
+  <article class="section reveal" id="renvois">
+    <header class="sec-head">
+      <p class="kicker">Échos bibliques</p>
+      <h2 class="sec-title">Renvois et passages parallèles</h2>
+      <p class="ref">Huit passages</p>
+    </header>
+    <p class="lead">Huit passages éclairent la péricope, du parallèle direct presque mot pour mot jusqu'à l'arrière-plan vétérotestamentaire qui nourrit ses images.</p>
+    <div class="renvois">
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Matthieu 5.33-37</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">Parole quasi identique de Jésus interdisant les serments casuistiques et réduisant la parole du disciple à «&nbsp;oui, oui; non, non&nbsp;», source directe de Jacques 5.12.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Matthieu 24.33; Marc 13.29</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">«&nbsp;Il est proche, à la porte&nbsp;» : l'image exacte du juge qui se tient à la porte (5.9) vient du discours eschatologique de Jésus sur l'imminence de sa venue.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Deutéronome 11.14; Joël 2.23</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">La promesse de «&nbsp;la pluie de l'automne et celle du printemps&nbsp;» accordée par Dieu au temps fixé éclaire l'image du cultivateur qui attend patiemment (5.7).</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Job 1.21-22; 2.10; 42.10-17</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">La persévérance de Job et «&nbsp;le but&nbsp;» (<i>telos</i>) que le Seigneur lui accorda à la fin fondent l'exemple central de l'endurance récompensée (5.11).</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Exode 34.6; Psaume 103.8</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">La formule d'alliance «&nbsp;miséricordieux et compatissant, lent à la colère&nbsp;» est reprise par <i>polysplagchnos kai oiktirmon</i> pour révéler le cœur de Dieu derrière l'épreuve (5.11).</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">1 Thessaloniciens 5.1-11</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">L'imminence de la <i>parousia</i> comme motif d'encouragement, de veille et de consolation mutuelle plutôt que de spéculation, en parallèle direct avec Jacques 5.7-9.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Hébreux 10.36-37; 12.1</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">L'appel à l'<i>hypomone</i> parce que «&nbsp;celui qui doit venir viendra, il ne tardera pas&nbsp;» : même articulation de l'endurance et de l'imminence du retour.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">2 Pierre 3.3-9</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">Répond à la moquerie «&nbsp;où est la promesse de son avènement?&nbsp;» : le délai n'est pas un démenti mais la patience (<i>makrothymia</i>) de Dieu, éclairant en quel sens le retour est «&nbsp;proche&nbsp;».</p>
+      </article>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ THÈMES THÉOLOGIQUES ============ -->
+  <article class="section reveal" id="themes">
+    <header class="sec-head">
+      <p class="kicker">Doctrine</p>
+      <h2 class="sec-title">Thèmes théologiques</h2>
+      <p class="ref">Cinq axes</p>
+    </header>
+    <p class="lead">Cinq axes dogmatiques traversent la péricope. Pour chacun, ce que le texte affirme, puis ce qu'il demande à l'assemblée.</p>
+
+    <section class="theme">
+      <h3 class="theme__title">L'imminence du retour de Christ et l'espérance qui soutient</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;L'avènement du Seigneur est proche&nbsp;» (5.8) et «&nbsp;le juge se tient à la porte&nbsp;» (5.9) : le parfait des verbes (<i>eggiken</i>, <i>hesteken</i>) pose le retour comme l'horizon permanent et imminent qui qualifie tout le temps de l'Église. Cadre dogmatique : eschatologie, retour personnel et visible de Christ et jugement dernier; 1689, chapitre 32 (Du jugement dernier). C'est ici que la lentille prémillénariste de MacArthur et la lecture amillénariste covenantale de la 1689 divergent dans l'articulation, tout en confessant ensemble l'imminence et la certitude de cet avènement.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour une assemblée qui souffre l'injustice ou la lassitude, l'espérance n'est pas un calcul de dates mais une personne qui vient. La patience naît de cette certitude, non d'un effort de volonté : c'est parce que le croyant est uni à un Christ qui revient qu'il peut tenir bon, et l'Esprit qui habite en lui est déjà les arrhes de cet avènement (Éphésiens 1.14).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La persévérance des saints dans l'épreuve</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>Jacques accumule le cultivateur (5.7), les prophètes (5.10) et Job (5.11) comme témoins de l'<i>hypomone</i>, et prononce une béatitude : «&nbsp;nous disons bienheureux ceux qui ont tenu bon&nbsp;» (5.11). Cadre dogmatique : la persévérance des saints, fruit de la providence qui ordonne l'épreuve pour affermir; 1689, chapitre 17 (De la persévérance des saints) et chapitre 5 (De la providence divine).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>L'endurance du croyant n'est pas un serrement de dents héroïque, mais le fruit de la grâce dans celui que Dieu garde jusqu'à la fin. Job s'est plaint, a chancelé, mais n'a pas lâché; le texte n'idéalise pas une force humaine, il révèle un Dieu qui mène les siens jusqu'au but. La consolation est que celui qui persévère le fait parce que Dieu le tient, non l'inverse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">Le caractère miséricordieux de Dieu comme fondement de la patience</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;Le Seigneur est plein de compassion et miséricordieux&nbsp;» (5.11, <i>polysplagchnos kai oiktirmon</i>) : la péricope culmine non dans une exhortation à serrer les rangs mais dans la révélation du cœur de Dieu, reprise de la formule d'alliance (Exode 34.6). Le «&nbsp;but&nbsp;» (<i>telos</i>) que Dieu accorda à Job dévoile sa bonté. Cadre dogmatique : théologie propre, les attributs de Dieu, sa bonté et sa miséricorde; 1689, chapitre 2 (De Dieu et de la Sainte Trinité).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>La patience chrétienne ne repose pas sur un stoïcisme qui serre les dents devant un destin aveugle, mais sur la connaissance d'un Dieu dont les entrailles sont pleines de pitié. Quand l'épreuve cache le visage de Dieu, le texte renvoie à son caractère révélé : la fin de l'histoire de Job, et plus encore la croix et la résurrection, prouvent où aboutit la patience d'un Père compatissant.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La parole vraie du croyant qui vit devant le Juge</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;Que votre oui soit oui, et votre non soit non, afin de ne pas tomber sous le jugement&nbsp;» (5.12) : l'interdiction du serment casuistique prolonge le thème de la langue maîtrisée (3.1-12) et clôt la section sur la motivation eschatologique, «&nbsp;afin de ne pas tomber sous le jugement&nbsp;». Cadre dogmatique : la légitimité du serment grave et l'interdiction du serment frivole; 1689, chapitre 23 (Des serments et des vœux licites).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Celui qui sait que le Juge se tient à la porte n'a pas besoin de cautionner sa parole par des serments : toute parole est déjà proférée devant Dieu. L'intégrité de la parole n'est pas une règle morale isolée, mais le fruit d'un cœur qui vit en présence du Seigneur qui vient. La transparence du langage découle de la sanctification opérée par l'Esprit, non d'une discipline imposée de l'extérieur.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">Le jugement remis à Dieu, et non à la vengeance humaine</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>La patience de 5.7-9 fait suite à l'oracle contre les riches (5.1-6) : l'opprimé ne se venge pas, car «&nbsp;le juge se tient à la porte&nbsp;» (5.9). Renoncer à murmurer contre le frère comme à riposter à l'oppresseur, c'est remettre le jugement à Celui à qui il appartient. Cadre dogmatique : la providence et la justice de Dieu, le magistrat divin (Romains 12.19); 1689, chapitres 5 et 32.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour une assemblée tentée de rendre le mal pour le mal ou de laisser la souffrance tourner en amertume contre les frères, le texte ne demande pas de minimiser l'injustice mais de la déposer entre les mains du seul Juge compétent. Cette remise n'est possible que pour celui qui croit vraiment que Christ revient juger : l'eschatologie désarme la rancune et libère pour la longanimité.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ PISTES DE RÉFLEXION ============ -->
+  <article class="section section--conclusion reveal" id="reflexion">
+    <header class="sec-head">
+      <p class="kicker">Vers la chaire</p>
+      <h2 class="sec-title">Pistes de réflexion</h2>
+      <p class="ref">Sept questions pour la prédication</p>
+    </header>
+    <p class="lead">Sept questions pour conduire du texte à la chaire : non des réponses toutes faites, mais les tensions que la prédication devra tenir.</p>
+    <ol class="questions">
+      <li>Si «&nbsp;l'avènement du Seigneur est proche&nbsp;» (5.8) a été écrit il y a près de vingt siècles, en quel sens prêcherez-vous l'imminence sans la réduire ni à un compte à rebours déjoué par l'histoire, ni à une métaphore vide qui n'attend plus rien? Qu'est-ce qui, dans le parfait du grec, refuse les deux écueils?</li>
+      <li>La question d'Israël et de l'Église traverse cette péricope par la porte de l'eschatologie. Comment mener honnêtement avec la lecture prémillénariste de MacArthur tout en signalant la position covenantale de la 1689, sans transformer le passage en débat de système qui étouffe l'appel pastoral à la patience que Jacques, lui, met au premier plan?</li>
+      <li>Jacques distingue deux patiences : la longanimité envers les oppresseurs (<i>makrothymia</i>, 5.7-9) et l'endurance sous les circonstances (<i>hypomone</i>, 5.11). Laquelle votre assemblée confond-elle avec une simple résignation passive, et comment l'image du cultivateur qui travaille en attendant la pluie corrige-t-elle ce malentendu?</li>
+      <li>L'exemple central est Job, qui pourtant se plaignit amèrement et contesta Dieu (Job 3; 10). Comment prêcherez-vous la «&nbsp;persévérance de Job&nbsp;» (5.11) sans l'idéaliser en un calme surhumain que les membres qui souffrent percevront aussitôt comme faux? Que révèle-t-il sur ce qu'est, ou n'est pas, la patience biblique?</li>
+      <li>Le verset 9 déplace le danger de l'oppresseur extérieur vers le frère intérieur : «&nbsp;ne vous plaignez pas les uns des autres&nbsp;». Pourquoi la souffrance partagée dans une assemblée tend-elle à se retourner en aigreur contre les proches plutôt que contre la vraie cause? Comment l'imminence du Juge (5.9) désarme-t-elle précisément cette tentation?</li>
+      <li>Jacques 5.12 sera entendu par certains comme une interdiction absolue de tout serment, y compris devant un tribunal. Comment établirez-vous, avec la 1689 (chapitre 23), la distinction entre le serment grave et licite et le serment casuistique condamné ici, sans gommer la pointe du texte sur l'intégrité de la parole?</li>
+      <li>La péricope culmine dans le caractère de Dieu, «&nbsp;plein de compassion et miséricordieux&nbsp;» (5.11), et non dans une exhortation à tenir bon. Si votre prédication finit sur l'effort de l'auditeur plutôt que sur le cœur révélé de Dieu, avez-vous suivi le mouvement même du texte? Où la patience puise-t-elle réellement sa force?</li>
+    </ol>
+  </article>
+
+</main>
+
+<footer class="footer">
+  <img class="footer__logo" src="../../Syntheses-Globales/LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy">
+  <p class="footer__church">Église Baptiste de Charlesbourg</p>
+  <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
+  <p class="footer__line">Recherche exégétique · Jacques 5.7-12 · 30 mai 2026 · AGB</p>
+  <p class="footer__line">Série «&nbsp;La foi qui agit&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  // Barre de progression de lecture
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Apparition de la navigation après le hero
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+
+    // Révélation au défilement
+    var revObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ revObs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>

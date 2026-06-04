@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jacques 1.19-27 · La Parole reçue, la Parole pratiquée — Recherche exégétique</title>
+<meta name="description" content="Recherche exégétique de Jacques 1.19-27 : contexte, arrière-plan du premier siècle, étude des mots grecs, apports des commentateurs réformés, renvois bibliques, thèmes théologiques et pistes de réflexion sur l'écoute et la pratique de la Parole. Église Baptiste de Charlesbourg.">
+<meta name="author" content="André-Guy Bruneau · Église Baptiste de Charlesbourg">
+<style>
+  :root{
+    /* ---- Palette Noir + orange ---- */
+    --nuit:#0a0a0a;        /* fond noir profond */
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;      /* panneaux */
+    --encre:#f3f0ec;       /* texte principal, contraste élevé */
+    --encre-doux:#c9c2ba;  /* texte secondaire, demeure lisible */
+    --or:#e8843c;          /* orange chaud (accent principal) */
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;     /* ambre lumineux (accent secondaire) */
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    /* Largeur de contenu proportionnelle : ~80% de l'écran sur grand écran,
+       plancher 58rem pour que mobile/tablette gardent une lecture confortable */
+    --max:max(58rem,80vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    /* Lecture confortable pour personnes aînées : grands caractères, interligne aéré */
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+
+  /* Grain de parchemin, très discret pour ne pas gêner la lecture */
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Voile sombre sur les bords, pour la profondeur */
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  /* ---- Barre de progression ---- */
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  /* ---- Navigation ---- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  /* Barre de progression de lecture, intégrée au bas de la navigation */
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{
+    flex:none;display:block;
+  }
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  /* ---- Hero / page-titre ---- */
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3.8rem,8vw + 1rem,9rem);
+    line-height:1;letter-spacing:.04em;margin:0;
+    /* Espace bas/côtés pour que les jambages du J et du q ne soient pas rognés par background-clip:text */
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.5rem,1.1rem + 1.5vw,2.25rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+
+  /* Entrée orchestrée du hero (douce) */
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.15s;}
+  .hero__title{animation-delay:.3s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+  .hero__meta{animation-delay:1.3s;}
+
+  /* ---- Sections ---- */
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3.5rem,9vw,7rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.8rem;}
+  .sec-num{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(2.8rem,2rem + 3vw,4.2rem);line-height:1;
+    color:var(--or);letter-spacing:.05em;margin-bottom:.4rem;
+    filter:drop-shadow(0 0 22px rgba(232,132,60,.28));
+  }
+  .sec-num::before,.sec-num::after{
+    content:"";width:clamp(1.6rem,6vw,3rem);height:1px;
+    background:linear-gradient(90deg,transparent,var(--filet-fort));
+  }
+  .sec-num::after{background:linear-gradient(90deg,var(--filet-fort),transparent);}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--encre);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+  .ref{
+    margin:1rem 0 0;font-size:.92rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  .lead{
+    font-size:1.22em;line-height:1.72;color:#faf3ec;
+    font-weight:500;
+    border-left:3px solid var(--or);
+    padding-left:1.3rem;margin:0 0 2.2rem;
+    text-wrap:pretty;
+  }
+  .section p{margin:0 0 1.45rem;text-wrap:pretty;}
+  .section .body p:first-of-type::first-letter{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    float:left;font-size:3.6em;line-height:.66;
+    padding:.06em .14em 0 0;margin-top:.04em;
+    color:var(--or-clair);
+    text-shadow:0 0 22px rgba(232,132,60,.32);
+  }
+
+  /* ---- Points de forme structurés (repérage rapide) ---- */
+  .points{list-style:none;margin:0 0 2.2rem;padding:0;}
+  .points li{
+    position:relative;margin:0 0 1.5rem;padding-left:2rem;
+    text-wrap:pretty;
+  }
+  .points li:last-child{margin-bottom:0;}
+  .points li::before{
+    content:"\25C6";position:absolute;left:.2rem;top:.55em;
+    font-size:.6em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .points b{color:var(--or-clair);font-weight:600;}
+
+  /* ---- Texte souligné (mise en évidence) ; ajouter .italique pour l'italique ---- */
+  .surligne{
+    text-decoration:underline;
+    text-decoration-color:var(--or);
+    text-decoration-thickness:.08em;
+    text-underline-offset:.18em;
+  }
+  .surligne.italique{font-style:italic;}
+
+  /* ---- Texte justifié (lecture confortable, gauche et droite) ---- */
+  .lead,.points li{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+
+  /* ---- Versets ---- */
+  .verses{margin:2.4rem 0;}
+  .verse{
+    position:relative;margin:0 0 1.1rem;
+    padding:1.3rem 1.4rem 1.3rem 1.6rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 5px 5px 0;
+    transition:border-left-color .3s,transform .3s,background .3s;
+  }
+  .verse:hover{border-left-color:var(--or-clair);transform:translateX(3px);}
+  .verse__text{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.25em;line-height:1.55;color:var(--encre);margin:0;
+  }
+  .verse__text::before{content:"\201C";color:var(--or);font-size:1.1em;}
+  .verse__text::after{content:"\201D";color:var(--or);font-size:1.1em;}
+  .verse__ref{
+    display:block;margin-top:.8rem;
+    font-family:"EB Garamond",serif;font-style:normal;
+    font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--or);
+  }
+
+  /* ---- Séparateur ---- */
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  /* Variantes intro / conclusion */
+  .section--intro .sec-title,.section--conclusion .sec-title{color:var(--or-clair);}
+
+  /* ---- Pied de page ---- */
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  /* ---- Révélation au défilement (groupes de contenu en cascade douce) ---- */
+  .reveal > *{
+    opacity:0;transform:translateY(16px);
+    transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in > *{opacity:1;transform:none;}
+  .reveal.in > *:nth-child(1){transition-delay:.04s;}
+  .reveal.in > *:nth-child(2){transition-delay:.13s;}
+  .reveal.in > *:nth-child(3){transition-delay:.22s;}
+  .reveal.in > *:nth-child(4){transition-delay:.31s;}
+  .reveal.in > *:nth-child(5){transition-delay:.40s;}
+  .reveal.in > *:nth-child(6){transition-delay:.49s;}
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+    .lead{padding-left:1rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal > *{opacity:1;transform:none;transition:none;}
+    .scrollcue{animation:none;}
+    .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+
+  /* ============================================================
+     COMPOSANTS PROPRES À LA PAGE DE RECHERCHE
+     (s'ajoutent au gabarit, dans le même langage visuel)
+     ============================================================ */
+
+  /* Titre-héros thématique (plus long) + marque de nav (référence) */
+  .hero__title{font-size:clamp(3rem,5vw + 1.4rem,6rem);text-wrap:balance;}
+  .nav__brand{font-size:clamp(1.05rem,.9rem + .55vw,1.4rem);letter-spacing:.08em;}
+  .hero__meta{
+    margin-top:1.4rem;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  /* ---- Tableau des mots-clés ---- */
+  .table-wrap{
+    margin:2.4rem 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    border:1px solid var(--filet);border-radius:6px;
+  }
+  .mots{border-collapse:collapse;width:100%;min-width:52rem;}
+  .mots th,.mots td{
+    padding:1rem 1.15rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid var(--filet);
+  }
+  .mots thead th{
+    background:var(--nuit-2);
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--or);border-bottom:1px solid var(--filet-fort);
+    white-space:nowrap;
+  }
+  .mots tbody tr:last-child td{border-bottom:none;}
+  .mots tbody tr:hover{background:rgba(232,132,60,.045);}
+  .mots td{font-size:.98rem;line-height:1.6;color:var(--encre-doux);}
+  .mot-fr{display:block;font-weight:600;color:var(--encre);}
+  .mot-gr{
+    display:block;margin-top:.25rem;
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.12em;color:var(--or-clair);
+  }
+  .col-sens{min-width:12rem;color:var(--encre);}
+  .trad{display:flex;flex-direction:column;gap:.3rem;font-size:.84rem;white-space:nowrap;}
+  .trad b{color:var(--or-clair);font-weight:600;letter-spacing:.03em;}
+
+  /* ---- Renvois / passages parallèles ---- */
+  .renvois{display:grid;gap:1.1rem;margin:2.4rem 0 0;grid-template-columns:1fr;}
+  @media (min-width:48rem){.renvois{grid-template-columns:1fr 1fr;}}
+  .renvoi{
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;padding:1.1rem 1.3rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.015));
+  }
+  .renvoi__head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:.7rem;flex-wrap:wrap;margin-bottom:.55rem;
+  }
+  .renvoi__ref{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.2rem;color:var(--or-clair);letter-spacing:.02em;
+  }
+  .renvoi__tag{
+    font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--or);border:1px solid var(--filet-fort);
+    border-radius:999px;padding:.22rem .65rem;white-space:nowrap;
+  }
+  .renvoi__desc{margin:0;font-size:.95rem;line-height:1.6;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+
+  /* ---- Thèmes théologiques (deux volets : texte / assemblée) ---- */
+  .theme{
+    margin:0;padding:1.6rem 1.7rem 1.5rem;
+    border:1px solid var(--filet);border-radius:9px;
+    background:linear-gradient(180deg,rgba(27,27,27,.55),rgba(18,18,18,.35));
+  }
+  .theme__title{
+    display:flex;align-items:center;gap:.75rem;margin:0 0 1.2rem;
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.4rem,1.1rem + .9vw,1.8rem);color:var(--or-clair);
+  }
+  .theme__title::before{
+    content:"\25C6";font-size:.52em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .theme__grid{display:grid;gap:1.2rem;}
+  @media (min-width:47rem){.theme__grid{grid-template-columns:1fr 1fr;align-items:start;}}
+  .theme__label{
+    display:flex;align-items:center;gap:.6rem;margin:0 0 .55rem;
+    font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);
+  }
+  .theme__label::after{content:"";flex:1;height:1px;background:var(--filet);}
+  .theme__part p{margin:0;font-size:.95rem;line-height:1.64;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+  .theme__part--app{
+    padding:1.05rem 1.15rem;border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),transparent);
+  }
+
+  /* ---- Pistes de réflexion (questions numérotées) ---- */
+  .questions{list-style:none;counter-reset:q;margin:2.4rem 0 0;padding:0;display:grid;gap:1.5rem;}
+  .questions li{
+    position:relative;counter-increment:q;padding-left:3.6rem;
+    text-align:justify;-webkit-hyphens:auto;hyphens:auto;
+  }
+  .questions li::before{
+    content:counter(q);position:absolute;left:0;top:-.15rem;
+    width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;
+    font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.35rem;
+    color:var(--or);border:1px solid var(--filet-fort);border-radius:50%;
+    background:rgba(232,132,60,.06);
+    filter:drop-shadow(0 0 10px rgba(232,132,60,.18));
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg — haut de page">
+    <img src="../../Syntheses-Globales/LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
+  <span class="nav__brand">Jacques 1.19-27</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#contexte">Contexte</a>
+    <a href="#arriere-plan">Arrière-plan</a>
+    <a href="#mots-cles">Mots-clés</a>
+    <a href="#commentateurs">Commentateurs</a>
+    <a href="#renvois">Parallèles</a>
+    <a href="#themes">Thèmes</a>
+    <a href="#reflexion">Réflexion</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p class="hero__kicker">Recherche · Jacques 1.19-27</p>
+    <h1 class="hero__title">La Parole reçue, la Parole pratiquée</h1>
+    <div class="ornament" aria-hidden="true"><span>◆</span></div>
+    <p class="hero__verse">
+      <span class="q">«</span>&nbsp;Mettez en pratique la parole et ne vous contentez pas de l'écouter en vous trompant vous-mêmes.&nbsp;<span class="q">»</span>
+    </p>
+    <p class="hero__ref">Jacques 1.22 · NEG</p>
+    <p class="hero__series">Série : <b>La foi qui agit</b></p>
+    <p class="hero__meta">Recherche exégétique · 30 mai 2026 · AGB · EBC</p>
+    <div class="scrollcue" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- ============ CONTEXTE DU PASSAGE ============ -->
+  <article class="section section--intro reveal" id="contexte">
+    <header class="sec-head">
+      <p class="kicker">Le passage</p>
+      <h2 class="sec-title">Contexte du passage</h2>
+      <p class="ref">Jacques 1.19-27</p>
+    </header>
+    <div class="verses">
+      <figure class="verse">
+        <p class="verse__text">Mettez en pratique la parole et ne vous contentez pas de l'écouter en vous trompant vous-mêmes.</p>
+        <cite class="verse__ref">Jacques 1.22 · NEG</cite>
+      </figure>
+      <figure class="verse">
+        <p class="verse__text">La religion pure et sans tache, devant Dieu notre Père, consiste à visiter les orphelins et les veuves dans leurs afflictions, et à se préserver des souillures du monde.</p>
+        <cite class="verse__ref">Jacques 1.27 · NEG</cite>
+      </figure>
+    </div>
+    <p class="lead">Notre péricope ouvre la première grande application pratique de l'épître, immédiatement après la pierre de touche posée en 1.18 : puisque la Parole nous a engendrés, c'est par notre rapport à cette même Parole que se vérifie la réalité de l'engendrement.</p>
+    <div class="body">
+      <p>La semaine précédente menait du Dieu qui éprouve et donne tout don parfait (1.2-17) au Dieu qui régénère monergiquement par sa Parole (1.18). Jacques tire maintenant la conséquence directe de cette nouvelle naissance. Le «&nbsp;ainsi donc&nbsp;» qui ouvre 1.19 (S21 «&nbsp;Sachez-le&nbsp;») relie organiquement la régénération de 1.18 à la réception de la Parole en 1.21. La péricope n'est donc pas un nouveau sujet, mais le déploiement éthique de l'œuvre de grâce déjà annoncée.</p>
+      <p>La structure interne enchaîne trois mouvements solidaires. D'abord la triade comportementale du verset 19 (prompt à écouter, lent à parler, lent à se mettre en colère), qui fonctionne comme un titre. Ensuite l'exhortation à recevoir avec douceur la Parole implantée et à être praticien et non auditeur seulement (1.21-25), illustrée par la parabole du miroir. Enfin la définition de la «&nbsp;religion pure&nbsp;» (1.26-27), qui place côte à côte la maîtrise de la langue, le soin des orphelins et des veuves, et la séparation d'avec le monde. Les trois éléments du verset 19 ne sont pas trois conseils épars : ils annoncent les trois grands champs que toute l'épître va labourer, l'écoute de la Parole (1.21-25), la langue (3.1-12; 4.11), et la colère ou les conflits (4.1-2).</p>
+      <p>Quant à la suite, la péricope énonce en germe le principe que le chapitre 2 développera en pleine controverse. «&nbsp;Mettez en pratique la parole et ne vous contentez pas de l'écouter en vous trompant vous-mêmes&nbsp;» (1.22) est l'antichambre directe de «&nbsp;la foi sans les œuvres est morte&nbsp;» (2.17,26). Ce que 1.19-27 affirme sous le registre de l'écoute, le chapitre 2 le formulera sous le registre de la foi. La semaine 3 pose ainsi le pivot de toute l'épître : la Parole reçue qui ne se traduit pas en vie n'a pas vraiment été reçue, et la religion qui ne touche ni la langue, ni le pauvre, ni la sainteté, se trompe elle-même.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ARRIÈRE-PLAN HISTORIQUE ET CULTUREL ============ -->
+  <article class="section reveal" id="arriere-plan">
+    <header class="sec-head">
+      <p class="kicker">Monde du premier siècle</p>
+      <h2 class="sec-title">Arrière-plan historique et culturel</h2>
+      <p class="ref">Jacques 1.19 · 1.23-25 · 1.27</p>
+    </header>
+    <p class="lead">Le commandement «&nbsp;prompt à écouter, lent à parler&nbsp;» (1.19) s'enracine dans la tradition de sagesse juive que les premiers destinataires respiraient, et plusieurs réalités matérielles de la péricope échappent au lecteur moderne.</p>
+    <div class="body">
+      <p>Le judaïsme du Second Temple avait fait de la retenue de la parole une vertu cardinale du sage : on songe au Siracide («&nbsp;Sois prompt à écouter, mais lent à répondre&nbsp;», Sir 5.11) et à la pédagogie rabbinique de l'écoute attentive avant la parole. Pour des assemblées judéo-chrétiennes encore appelées «&nbsp;synagogue&nbsp;» (2.2) et structurées autour de la lecture publique de l'Écriture, l'«&nbsp;écoute&nbsp;» de 1.19 n'est pas une attitude intérieure vague mais évoque concrètement la réception de la Parole proclamée dans le rassemblement. Le lecteur moderne, habitué à un texte privé et silencieux, manque cette dimension communautaire et liturgique de l'écoute.</p>
+    </div>
+    <p>Trois réalités échappent au lecteur moderne.</p>
+    <ul class="points">
+      <li><b>La retenue de la parole.</b> «&nbsp;Prompt à écouter, lent à parler&nbsp;» n'est pas un conseil de prudence mondaine : il prolonge toute une sagesse vétérotestamentaire et intertestamentaire où le sage se distingue du sot par la maîtrise de sa langue. Pour des assemblées encore appelées «&nbsp;synagogue&nbsp;» (2.2) et tournées vers la lecture publique de l'Écriture, écouter, c'est d'abord recevoir la Parole proclamée dans le rassemblement, et non méditer en silence un texte privé.</li>
+      <li><b>Le miroir de bronze.</b> Le miroir des versets 23-25 perd presque toute sa force pour qui imagine une glace moderne. Le miroir antique était une plaque de métal poli, le plus souvent du bronze ou du cuivre, parfois de l'argent; Corinthe était réputée pour sa fabrication, ce qui éclaire aussi 1 Corinthiens 13.12. Son reflet était sombre, partiel, déformé, et le métal se ternissait vite. L'image que Jacques convoque n'est donc pas celle d'une vision parfaite mais d'un coup d'œil furtif et imparfait que l'on oublie aussitôt, par contraste avec la Parole qui est «&nbsp;la loi parfaite, celle de la liberté&nbsp;» (1.25) et donne une vision durable et libératrice à qui s'y penche et y demeure.</li>
+      <li><b>L'orphelin et la veuve.</b> Le couple «&nbsp;orphelins et veuves&nbsp;» (1.27) désigne, dans une société agraire sans filet social ni droit successoral protecteur pour elles, la catégorie type des sans-défense, premières victimes de l'oppression que Jacques dénoncera (5.4-6). L'Ancien Testament fait de leur protection le test même de la fidélité à l'alliance : Dieu lui-même est «&nbsp;le père des orphelins et le défenseur des veuves&nbsp;» (Psaume 68.6; Exode 22.21-23; Deutéronome 10.18; Ésaïe 1.17,23). «&nbsp;Visiter&nbsp;» (S21 «&nbsp;s'occuper de&nbsp;») n'est pas une visite de courtoisie mais une prise en charge effective, ce qui dénonce d'avance toute religion d'orthodoxie verbale sans bourse ni mains ouvertes.</li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ÉTUDE DES MOTS-CLÉS ============ -->
+  <article class="section reveal" id="mots-cles">
+    <header class="sec-head">
+      <p class="kicker">Vocabulaire</p>
+      <h2 class="sec-title">Étude des mots-clés</h2>
+      <p class="ref">Cinq termes grecs</p>
+    </header>
+    <p class="lead">Cinq mots portent le poids théologique de la péricope. Les isoler, c'est tenir le fil de l'argument de Jacques : de la colère installée du cœur déchu (<i>bradys eis orgèn</i>) à la Parole implantée qui sauve (<i>emphytos</i>), reçue avec douceur (<i>prautès</i>), puis mise en pratique par le praticien et non l'auditeur seulement (<i>poiètès ergou</i>), jusqu'à la religion redéfinie (<i>thrèskeia</i>).</p>
+    <div class="table-wrap">
+      <table class="mots">
+        <thead>
+          <tr>
+            <th scope="col">Français · translit.</th>
+            <th scope="col">Sens littéral</th>
+            <th scope="col">Champ sémantique</th>
+            <th scope="col">Traductions comparées</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="mot-fr">lent à se mettre en colère</span><span class="mot-gr">bradys eis orgèn</span></th>
+            <td class="col-sens">lent, tardif quant à la colère; <i>orgè</i> désigne une colère installée, durable, par opposition à l'emportement passager</td>
+            <td><i>Orgè</i> est le terme employé pour la «&nbsp;colère de Dieu&nbsp;» juste et sainte (Romains 1.18; Jean 3.36), ce qui interdit d'y voir un péché en soi. Mais chez l'homme déchu, cette colère installée est suspecte : «&nbsp;la colère de l'homme n'accomplit pas la justice de Dieu&nbsp;» (1.20). Le même registre commande Éphésiens 4.26-31 et Colossiens 3.8.</td>
+            <td><span class="trad"><span><b>S21</b> lent à se mettre en colère</span><span><b>NEG79</b> lent à se mettre en colère</span><span><b>Darby</b> lent à la colère</span><span><b>LSG</b> lent à se mettre en colère</span><span><b>KJF</b> lent à la colère</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">recevez avec douceur</span><span class="mot-gr">en prautèti dexasthe</span></th>
+            <td class="col-sens">accueillir, recevoir favorablement (<i>dechomai</i>) avec douceur, mansuétude, humilité enseignable (<i>prautès</i>)</td>
+            <td><i>Prautès</i> n'est pas la faiblesse mais la force domptée, soumise. C'est une béatitude (Matthieu 5.5) et un fruit de l'Esprit (Galates 5.23); Jésus se dit lui-même «&nbsp;doux et humble de cœur&nbsp;» (Matthieu 11.29). <i>Dexasthe</i> est le verbe de l'accueil de la Parole de Dieu chez ceux qui la reçoivent vraiment (Actes 17.11; 1 Thessaloniciens 2.13). La douceur ici est l'opposé de la colère du verset 20 et de l'esprit de contestation devant la Parole.</td>
+            <td><span class="trad"><span><b>S21</b> accueillez avec douceur</span><span><b>NEG79</b> recevez avec douceur</span><span><b>Darby</b> recevez avec douceur</span><span><b>LSG</b> recevez avec douceur</span><span><b>KJF</b> recevez avec douceur</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">implantée (enracinée)</span><span class="mot-gr">emphytos</span></th>
+            <td class="col-sens">implantée, greffée, innée; ce qui a été planté en dedans et y a pris racine</td>
+            <td>Hapax dans le Nouveau Testament. L'adjectif tient ensemble deux idées que la tradition réformée distingue sans les séparer : la Parole est plantée du dehors (semée, comme en Matthieu 13.3-23; 1 Pierre 1.23) et elle prend racine au-dedans par l'œuvre régénératrice de 1.18. Elle «&nbsp;peut sauver vos âmes&nbsp;», non comme une formule magique mais comme l'instrument ordinaire par lequel Dieu opère le salut (Romains 10.17). Le terme renvoie à la nouvelle naissance déjà accomplie, dont la réception docile est le signe.</td>
+            <td><span class="trad"><span><b>S21</b> implantée en vous</span><span><b>NEG79</b> qui a été planté en vous</span><span><b>Darby</b> implantée</span><span><b>LSG</b> qui a été planté en vous</span><span><b>KJF</b> greffée</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">celui qui met en pratique</span><span class="mot-gr">poiètès ergou</span></th>
+            <td class="col-sens">un faiseur, un praticien de l'œuvre, par opposition à <i>akroatès</i>, l'auditeur qui se contente d'entendre</td>
+            <td><i>Poiètès</i> désigne celui qui agit, qui produit; <i>akroatès</i> évoque l'auditeur d'une conférence ou d'une lecture, le spectateur passif. Le couplage entendre et faire est l'écho direct de Matthieu 7.24-27 et du <i>Shema</i>, où «&nbsp;écouter&nbsp;» (<i>shama</i>) implique «&nbsp;obéir&nbsp;». Romains 2.13 emploie exactement la même opposition : «&nbsp;ce ne sont pas ceux qui écoutent la loi qui sont justes, mais ceux qui la mettent en pratique.&nbsp;» L'auditeur seulement «&nbsp;se trompe lui-même&nbsp;» (<i>paralogizomai</i>, raisonne à faux).</td>
+            <td><span class="trad"><span><b>S21</b> mettez en pratique</span><span><b>NEG79</b> mettez en pratique</span><span><b>Darby</b> observateurs de la parole</span><span><b>LSG</b> mettez en pratique</span><span><b>KJF</b> faiseurs de la parole</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">religion (culte)</span><span class="mot-gr">thrèskeia</span></th>
+            <td class="col-sens">religion, culte, surtout dans sa dimension extérieure et rituelle, l'exercice du culte et de la piété</td>
+            <td><i>Thrèskeia</i> (et l'adjectif <i>thrèskos</i>, «&nbsp;religieux&nbsp;», en 1.26) souligne la pratique cultuelle observable plus que la foi intérieure. Rare dans le Nouveau Testament (Actes 26.5 pour le judaïsme; Colossiens 2.18 pour un culte des anges). Jacques ne déprécie pas le culte; il le redéfinit : la dévotion qui compte aux yeux de Dieu se mesure à la langue maîtrisée, au pauvre secouru et à la sainteté gardée. Il déplace la religion du seul registre rituel vers la totalité de la vie devant Dieu.</td>
+            <td><span class="trad"><span><b>S21</b> religion</span><span><b>NEG79</b> religion</span><span><b>Darby</b> service religieux / culte</span><span><b>LSG</b> religion</span><span><b>KJF</b> religion</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ APPORTS DES COMMENTATEURS ============ -->
+  <article class="section reveal" id="commentateurs">
+    <header class="sec-head">
+      <p class="kicker">Tradition réformée</p>
+      <h2 class="sec-title">Apports des commentateurs</h2>
+      <p class="ref">Jacques 1.21-27</p>
+    </header>
+    <p class="lead">La question interprétative centrale de la péricope tient en un mot : Jacques fonde-t-il le salut sur la performance morale («&nbsp;la parole implantée peut sauver vos âmes&nbsp;», 1.21; «&nbsp;la religion pure&nbsp;», 1.27), ou décrit-il les fruits inévitables d'un salut déjà donné par la grâce? Tout l'enjeu pastoral, et tout le risque de moralisme, se joue là.</p>
+    <div class="body">
+      <p>La réponse de la tradition réformée est ferme et unanime : 1.18 a déjà tranché. C'est Dieu qui «&nbsp;nous a engendrés par la parole de vérité&nbsp;» selon sa seule volonté; la péricope qui suit ne dit pas comment mériter cette naissance mais comment elle se manifeste. La Parole «&nbsp;implantée&nbsp;» (<i>emphytos</i>, 1.21) renvoie à cet engendrement déjà opéré : on reçoit avec douceur celle qui a déjà pris racine. La mise en pratique n'est donc pas la racine du salut mais sa preuve, exactement comme les œuvres seront, au chapitre 2, la preuve et non la cause de la foi.</p>
+    </div>
+    <ul class="points">
+      <li><b>John MacArthur.</b> MacArthur lit 1.22-25 comme un test diagnostique de l'authenticité de la foi, dans la ligne de sa théologie du <i>Lordship salvation</i> : l'auditeur qui n'agit pas n'a pas une foi déficiente à compléter, il a une foi qui «&nbsp;se trompe elle-même&nbsp;», une profession vide. Pour MacArthur, le miroir n'invite pas à se contempler mais à se laisser réformer; la «&nbsp;loi parfaite de la liberté&nbsp;» (1.25) est l'Écriture entière reçue comme norme, la liberté étant celle de l'affranchi du péché qui obéit désormais de cœur. Il insiste, contre le «&nbsp;croire facile&nbsp;», que la religion non pratiquée n'est pas une foi faible mais une fausse foi.</li>
+      <li><b>Calvin.</b> Calvin éclaire deux points décisifs. Sur «&nbsp;la parole peut sauver vos âmes&nbsp;» (1.21), il précise que la Parole ne sauve pas par sa propre énergie comme une cause efficiente autonome, mais comme l'instrument dont Dieu se sert; il faut donc se garder de prêter au moyen ce qui appartient à l'Auteur. Sur «&nbsp;la loi de la liberté&nbsp;» (1.25), Calvin refuse d'y voir une licence : la liberté chrétienne est celle des enfants qui, affranchis de la malédiction et de la contrainte servile, servent Dieu d'un cœur libre et volontaire. Pour lui, l'opposition auditeur/praticien vise précisément l'hypocrisie de qui se flatte d'une connaissance stérile.</li>
+      <li><b>Spurgeon, les puritains et Schreiner.</b> Spurgeon, dans sa prédication, presse l'image du miroir : l'homme qui s'y regarde puis s'en va et oublie aussitôt à quoi il ressemble est le portrait de l'auditeur du dimanche que la Parole n'a pas retenu; la vraie écoute demeure penchée sur le texte assez longtemps pour en être transformée. Thomas Schreiner, commentateur réformé baptiste contemporain, souligne que «&nbsp;la loi parfaite de la liberté&nbsp;» désigne la volonté de Dieu telle qu'elle s'exprime dans l'évangile et l'enseignement de Jésus, et non la seule loi mosaïque; il maintient avec netteté que les œuvres de 1.22-27 sont la conséquence nécessaire, non la condition méritoire, de la régénération de 1.18. Les puritains, dans la même veine (Thomas Watson, Richard Baxter), faisaient de la manière d'écouter un examen de conscience : entendre sans pratiquer, c'est, selon leur formule classique, bâtir sur le sable.</li>
+      <li><b>MacArthur et la confession de 1689.</b> Là où la lecture de MacArthur diverge de la confession de 1689, il faut le nommer avec honnêteté, même si la péricope n'aborde pas frontalement l'eschatologie. MacArthur lit l'épître dans un cadre dispensationaliste et prémillénariste, et tend à voir dans les destinataires des «&nbsp;douze tribus&nbsp;» (1.1) des croyants juifs au statut distinct dans le plan divin, l'Église et Israël demeurant deux peuples aux destins séparés. La confession de 1689, covenantale et largement amillénariste, lit au contraire la dispersion comme image du peuple unique de la nouvelle alliance, sans cet échafaudage des dispensations. Sur la péricope elle-même, l'écart est mince : «&nbsp;la loi parfaite de la liberté&nbsp;» (1.25) sera entendue par le covenantalisme comme la loi morale de Dieu portée à son accomplissement en Christ et inscrite dans le cœur régénéré (Jérémie 31.33; 2 Corinthiens 3), tandis qu'un dispensationaliste insistera davantage sur la nouveauté de l'éthique de la grâce. Les deux positions s'accordent sur l'essentiel ici : la Parole reçue commande l'obéissance, et cette obéissance est le fruit de l'Esprit, non un capital de mérites.</li>
+      <li><b>Garder l'ordre du texte contre le moralisme.</b> Le prédicateur évitera le moralisme en gardant l'ordre du texte. Jacques ne dit jamais : «&nbsp;pratiquez pour être engendrés.&nbsp;» Il dit : parce que vous avez été engendrés (1.18), recevez la Parole implantée et mettez-la en pratique. L'impératif («&nbsp;mettez en pratique&nbsp;», «&nbsp;recevez avec douceur&nbsp;») repose toujours sur l'indicatif de la grâce qui précède. La religion pure de 1.27 n'est donc pas une liste de devoirs pour gagner Dieu, mais la signature de l'Esprit dans une vie unie à Christ.</li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ RENVOIS ET PASSAGES PARALLÈLES ============ -->
+  <article class="section reveal" id="renvois">
+    <header class="sec-head">
+      <p class="kicker">Échos bibliques</p>
+      <h2 class="sec-title">Renvois et passages parallèles</h2>
+      <p class="ref">Huit passages</p>
+    </header>
+    <p class="lead">Huit passages éclairent la péricope, du parallèle direct presque mot pour mot jusqu'à l'arrière-plan vétérotestamentaire et sapientiel qui nourrit ses images.</p>
+    <div class="renvois">
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Matthieu 7.21-27</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">La maison sur le roc et sur le sable : entendre les paroles de Jésus sans les mettre en pratique, c'est exactement l'auditeur oublieux de Jacques 1.22-25.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Jacques 2.14-26</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">La suite immédiate de l'argument : ce que 1.22 dit de la Parole écoutée mais non pratiquée, le chapitre 2 le dira de la foi sans les œuvres, qui est morte.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Romains 2.13</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">Même opposition que Jacques : ce ne sont pas les auditeurs de la loi qui sont justes, mais ceux qui la mettent en pratique.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">1 Pierre 1.23 - 2.2</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">Régénérés par la parole vivante de Dieu, les croyants doivent désirer le lait pur de cette parole : écho très proche de la parole implantée qui sauve (Jacques 1.18-21).</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Deutéronome 10.18; Ésaïe 1.17</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">Dieu fait droit à l'orphelin et à la veuve et appelle son peuple à les défendre : l'arrière-plan d'alliance qui fonde la religion pure de Jacques 1.27.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Psaume 68.6</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">Dieu est le père des orphelins et le défenseur des veuves : le soin des sans-défense reflète le caractère même de Dieu que Jacques 1.27 met en avant.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Proverbes 10.19; Siracide 5.11</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">La sagesse vétérotestamentaire et intertestamentaire de la retenue de la parole, prompt à écouter et lent à parler, qui nourrit directement Jacques 1.19.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Galates 5.6</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">La foi agissant par l'amour : la formule paulinienne qui résume l'unité entre la Parole reçue et la Parole pratiquée que Jacques met en avant.</p>
+      </article>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ THÈMES THÉOLOGIQUES ============ -->
+  <article class="section reveal" id="themes">
+    <header class="sec-head">
+      <p class="kicker">Doctrine</p>
+      <h2 class="sec-title">Thèmes théologiques</h2>
+      <p class="ref">Cinq axes</p>
+    </header>
+    <p class="lead">Cinq axes dogmatiques traversent la péricope. Pour chacun, ce que le texte affirme, puis ce qu'il demande à l'assemblée.</p>
+
+    <section class="theme">
+      <h3 class="theme__title">La Parole, instrument de la régénération et de la sanctification</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;La parole implantée, qui peut sauver vos âmes&nbsp;» (1.21), reçue avec douceur, prolonge directement «&nbsp;il nous a engendrés par la parole de vérité&nbsp;» (1.18). Dans le cadre réformé, la Parole n'est pas une cause autonome mais l'instrument ordinaire dont l'Esprit se sert pour régénérer et sanctifier (<i>sola Scriptura</i> comme moyen de grâce). La confession de 1689 traite des Saintes Écritures comme norme suprême (chapitre 1) et de la sanctification opérée par la Parole et l'Esprit (chapitre 13).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour l'assemblée, cela déplace le centre de gravité de l'effort de volonté vers la Parole reçue avec douceur. On ne se transforme pas en se contemplant soi-même, mais en demeurant penché sur l'Écriture par laquelle l'Esprit fait son œuvre. L'obéissance qui suit n'est pas un projet d'auto-amélioration, mais le fruit d'une Parole qui a pris racine chez le régénéré.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">Écouter et faire : la foi vivante avant la lettre</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;Mettez en pratique la parole et ne vous contentez pas de l'écouter en vous trompant vous-mêmes&nbsp;» (1.22-25). Le texte pose le principe que 2.14-26 développera : une réception de la Parole qui ne se traduit pas en vie n'est pas une vraie réception. Cadre dogmatique : la justification par la foi seule, mais une foi qui n'est jamais seule (1689, chapitres 11 et 16, les bonnes œuvres comme fruits et preuves de la foi).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour une assemblée portée au «&nbsp;croire facile&nbsp;» ou à la consommation de bonne doctrine, le test n'est pas la quantité d'enseignement entendu mais sa traduction en obéissance. L'enjeu n'est pas de mériter le salut par la pratique, mais de discerner si la Parole a vraiment été reçue. La réponse à une écoute stérile n'est pas plus d'effort mais le retour à Christ, dont l'union produit nécessairement le fruit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La colère de l'homme et la justice de Dieu</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;Soyez prompts à écouter, lents à parler, lents à vous mettre en colère, car la colère de l'homme n'accomplit pas la justice de Dieu&nbsp;» (1.19-20). Jacques met le doigt sur la racine : la colère installée du cœur déchu, qui se croit zèle pour la vérité et n'engendre que désordre (préfigurant 3.14-16 et 4.1-2). Cadre dogmatique : hamartiologie, la dépravation se manifeste dans la parole et la passion (1689, chapitre 6).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>L'assemblée apprend que la colère qui se drape en défense de la vérité ne produit pas la justice de Dieu. Plutôt que d'exiger un meilleur self-control par discipline crispée, le texte renvoie au cœur renouvelé et à la douceur (<i>prautès</i>) qui est fruit de l'Esprit. La parole sanctifiée jaillit d'une source changée, non d'une volonté tendue.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La religion pure : miséricorde et sainteté comme marques de la foi</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;La religion pure et sans tache devant Dieu consiste à s'occuper des orphelins et des veuves dans leur détresse et à se garder de toute tache du monde&nbsp;» (1.27). Jacques redéfinit le culte (<i>thrèskeia</i>) en y intégrant miséricorde active et séparation d'avec le monde. Cadre dogmatique : la sanctification touche l'homme tout entier et l'antithèse entre le monde et Dieu (1689, chapitre 13), les bonnes œuvres preuves de la foi (chapitre 16).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour une assemblée à l'aise matériellement, le texte refuse l'esquive : le soin du vulnérable n'est pas une option militante mais une marque de la foi véritable, signature du caractère du Dieu qui défend l'orphelin et la veuve. Ce n'est pas du moralisme social : c'est la miséricorde reçue qui déborde en miséricorde donnée, chez ceux que l'Esprit a unis à Christ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La liberté sous la loi parfaite</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;Celui qui aura plongé les regards dans la loi parfaite, la loi de la liberté, et qui aura persévéré... sera heureux dans son activité&nbsp;» (1.25). Loin d'opposer liberté et loi, Jacques les unit : la Parole de Dieu reçue affranchit et rend heureux dans l'obéissance. Cadre dogmatique : la liberté chrétienne et la loi de Dieu (1689, chapitres 19 et 21), la loi écrite dans le cœur du régénéré.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>L'assemblée découvre que l'obéissance n'est pas une servitude mais la liberté de l'enfant affranchi du péché. La loi de Dieu n'est plus une menace condamnante mais le cadre heureux de la vie nouvelle. La bénédiction promise («&nbsp;heureux dans son activité&nbsp;») n'est pas un salaire mérité mais la joie de celui qui vit selon ce pour quoi il a été recréé en Christ.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ PISTES DE RÉFLEXION ============ -->
+  <article class="section section--conclusion reveal" id="reflexion">
+    <header class="sec-head">
+      <p class="kicker">Vers la chaire</p>
+      <h2 class="sec-title">Pistes de réflexion</h2>
+      <p class="ref">Sept questions pour la prédication</p>
+    </header>
+    <p class="lead">Sept questions pour conduire du texte à la chaire : non des réponses toutes faites, mais les tensions que la prédication devra tenir.</p>
+    <ol class="questions">
+      <li>Comment prêcherez-vous «&nbsp;la parole implantée peut sauver vos âmes&nbsp;» (1.21) sans glisser vers une sotériologie de la performance, tout en gardant que le verset 18 a déjà tranché : c'est Dieu qui engendre, et la réception docile en est le signe, non la cause?</li>
+      <li>L'image du miroir (1.23-25) suppose un miroir de bronze au reflet sombre et fugace. Comment cette réalité matérielle change-t-elle votre lecture, et où la prédication risque-t-elle de réduire le miroir à un appel à l'introspection plutôt qu'à la transformation par la Parole?</li>
+      <li>Jacques dit que «&nbsp;la colère de l'homme n'accomplit pas la justice de Dieu&nbsp;» (1.20). Pour une assemblée réformée attachée à la vérité, où la colère qui se croit zèle doctrinal trahit-elle en réalité la racine déchue que le texte vise? Comment éviter de prêcher la maîtrise de soi comme un simple effort de volonté?</li>
+      <li>La «&nbsp;religion pure&nbsp;» de 1.27 conjugue le soin des orphelins et des veuves avec la séparation d'avec le monde. Pour une assemblée à l'aise matériellement, où l'application devient-elle trop facile («&nbsp;cela vise les autres, pas nous&nbsp;»), et qu'est-ce que le texte exige qu'elle préférerait ne pas entendre?</li>
+      <li>En quoi 1.22, «&nbsp;mettez en pratique la parole et ne vous contentez pas de l'écouter&nbsp;», est-il déjà le chapitre 2 en germe? Comment annoncer ce principe maintenant sans vider d'avance le développement sur la foi et les œuvres que la série abordera la semaine suivante?</li>
+      <li>Le lien avec Matthieu 7.21-27 est direct : l'auditeur non praticien bâtit sur le sable. Comment ferez-vous entendre que l'enjeu n'est pas une foi faible à fortifier mais, possiblement, une fausse assurance à démasquer, sans pour autant écraser les consciences fragiles de vrais croyants?</li>
+      <li>Où la péricope présuppose-t-elle la grâce qui soutient ses impératifs? Prêcherez-vous la douceur (<i>prautès</i>) et la pratique de la Parole comme des fruits de l'Esprit chez l'uni à Christ, ou seulement comme des devoirs à accomplir, retombant ainsi dans le moralisme que la tradition réformée refuse?</li>
+    </ol>
+  </article>
+
+</main>
+
+<footer class="footer">
+  <img class="footer__logo" src="../../Syntheses-Globales/LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy">
+  <p class="footer__church">Église Baptiste de Charlesbourg</p>
+  <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
+  <p class="footer__line">Recherche exégétique · Jacques 1.19-27 · 30 mai 2026 · AGB</p>
+  <p class="footer__line">Série «&nbsp;La foi qui agit&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  // Barre de progression de lecture
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Apparition de la navigation après le hero
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+
+    // Révélation au défilement
+    var revObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ revObs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
