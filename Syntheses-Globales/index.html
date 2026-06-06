@@ -345,6 +345,48 @@
     text-transform:uppercase;color:var(--or);
   }
 
+  /* ---- Prédication : accès aux douze recherches ---- */
+  .semaines{
+    list-style:none;margin:2.4rem 0 0;padding:0;
+    display:grid;gap:1.1rem;
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr));
+  }
+  .semaine{margin:0;}
+  .semaine a{
+    display:flex;flex-direction:column;gap:.55rem;height:100%;
+    padding:1.45rem 1.5rem 1.55rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;color:var(--encre);
+    transition:border-left-color .3s,transform .3s,background .3s,box-shadow .3s;
+  }
+  .semaine a:hover{
+    border-left-color:var(--or-clair);transform:translateX(3px);
+    background:linear-gradient(180deg,rgba(232,132,60,.13),rgba(232,132,60,.05));
+    box-shadow:0 8px 26px rgba(0,0,0,.32);
+  }
+  .semaine a:focus-visible{outline:2px solid var(--or);outline-offset:3px;}
+  .semaine__num{
+    font-family:"Cormorant Garamond",serif;font-size:.82rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .semaine__titre{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.55rem;line-height:1.14;color:var(--encre);
+    transition:color .3s;
+  }
+  .semaine a:hover .semaine__titre{color:var(--or-clair);}
+  .semaine__ref{
+    margin-top:auto;display:flex;align-items:center;gap:.6rem;
+    font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--encre-doux);
+  }
+  .semaine__go{
+    margin-left:auto;color:var(--or);font-size:1.05em;
+    transition:transform .3s;
+  }
+  .semaine a:hover .semaine__go{transform:translateX(4px);}
+
   /* ---- Révélation au défilement (groupes de contenu en cascade douce) ---- */
   .reveal > *{
     opacity:0;transform:translateY(16px);
@@ -391,6 +433,7 @@
     <a href="#ch4">Ch. 4</a>
     <a href="#ch5">Ch. 5</a>
     <a href="#conclusion">Conclusion</a>
+    <a href="#predication">Prédication</a>
   </nav>
 </header>
 
@@ -622,6 +665,80 @@
       <li><b>Une foi qui n'est pas privée.</b> L'épître s'achève alors sur une communauté qui prie dans toutes les saisons et qui va rechercher celui qui s'égare (Jacques 5.16-20). La foi vivante n'est pas une affaire privée ; elle veille les uns sur les autres.</li>
       <li><b>La leçon centrale.</b> Voilà la leçon centrale, et elle réconcilie Jacques avec l'apôtre Paul. Paul explique comment un pécheur est déclaré juste devant Dieu : par la foi seule, sans les œuvres. Jacques décrit la nature de cette foi qui sauve : une foi vivante produit toujours des œuvres, tandis qu'«&nbsp;une foi sans œuvres est morte&nbsp;» (Jacques 2.17).</li>
       <li><b>Revenir à Christ.</b> L'appel final n'est donc pas de redoubler d'effort moral, mais de revenir à Christ. C'est son Esprit qui produit nécessairement le fruit chez ceux qui sont vraiment unis à lui ; la vraie religion se voit alors dans une vie changée (Jacques 1.27).</li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ PRÉDICATION ============ -->
+  <article class="section reveal" id="predication">
+    <header class="sec-head">
+      <p class="kicker">Prédication</p>
+      <h2 class="sec-title">Les douze recherches de la série</h2>
+      <p class="ref">Jacques 1 à 5 · 12 semaines</p>
+    </header>
+    <p class="lead">La série «&nbsp;La foi qui agit&nbsp;» se déploie sur douze semaines d'exposition suivie. Chaque passage dispose d'une recherche exégétique complète : choisissez une semaine pour ouvrir sa recherche et préparer la prédication.</p>
+    <ul class="semaines">
+      <li class="semaine"><a href="../Recherches/01%20-%20La%20joie%20au%20creuset%20de%20l%27%C3%A9preuve%20%28Jacques%201.1-12%29/index.html">
+        <span class="semaine__num">Semaine 1</span>
+        <span class="semaine__titre">La joie au creuset de l'épreuve</span>
+        <span class="semaine__ref">Jacques 1.1-12<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/02%20-%20Le%20Dieu%20qui%20ne%20change%20pas%20%28Jacques%201.13-18%29/index.html">
+        <span class="semaine__num">Semaine 2</span>
+        <span class="semaine__titre">Le Dieu qui ne change pas</span>
+        <span class="semaine__ref">Jacques 1.13-18<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/03%20-%20Auditeurs%20ou%20praticiens%20%28Jacques%201.19-27%29/index.html">
+        <span class="semaine__num">Semaine 3</span>
+        <span class="semaine__titre">Auditeurs ou praticiens</span>
+        <span class="semaine__ref">Jacques 1.19-27<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/04%20-%20La%20foi%20sans%20partialit%C3%A9%20%28Jacques%202.1-13%29/index.html">
+        <span class="semaine__num">Semaine 4</span>
+        <span class="semaine__titre">La foi sans partialité</span>
+        <span class="semaine__ref">Jacques 2.1-13<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/05%20-%20La%20foi%20qui%20agit%20%28Jacques%202.14-26%29/index.html">
+        <span class="semaine__num">Semaine 5</span>
+        <span class="semaine__titre">La foi qui agit</span>
+        <span class="semaine__ref">Jacques 2.14-26<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/06%20-%20Le%20petit%20membre%2C%20le%20grand%20feu%20%28Jacques%203.1-12%29/index.html">
+        <span class="semaine__num">Semaine 6</span>
+        <span class="semaine__titre">Le petit membre, le grand feu</span>
+        <span class="semaine__ref">Jacques 3.1-12<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/07%20-%20Deux%20sagesses%20%28Jacques%203.13-18%29/index.html">
+        <span class="semaine__num">Semaine 7</span>
+        <span class="semaine__titre">Deux sagesses</span>
+        <span class="semaine__ref">Jacques 3.13-18<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/08%20-%20L%27amiti%C3%A9%20du%20monde%20%28Jacques%204.1-10%29/index.html">
+        <span class="semaine__num">Semaine 8</span>
+        <span class="semaine__titre">L'amitié du monde</span>
+        <span class="semaine__ref">Jacques 4.1-10<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/09%20-%20Si%20le%20Seigneur%20le%20veut%20%28Jacques%204.11-17%29/index.html">
+        <span class="semaine__num">Semaine 9</span>
+        <span class="semaine__titre">Si le Seigneur le veut</span>
+        <span class="semaine__ref">Jacques 4.11-17<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/10%20-%20Le%20cri%20des%20moissonneurs%20%28Jacques%205.1-6%29/index.html">
+        <span class="semaine__num">Semaine 10</span>
+        <span class="semaine__titre">Le cri des moissonneurs</span>
+        <span class="semaine__ref">Jacques 5.1-6<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/11%20-%20Patience%20jusqu%27%C3%A0%20son%20retour%20%28Jacques%205.7-12%29/index.html">
+        <span class="semaine__num">Semaine 11</span>
+        <span class="semaine__titre">Patience jusqu'à son retour</span>
+        <span class="semaine__ref">Jacques 5.7-12<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="semaine"><a href="../Recherches/12%20-%20La%20pri%C3%A8re%20qui%20agit%20%28Jacques%205.13-20%29/index.html">
+        <span class="semaine__num">Semaine 12</span>
+        <span class="semaine__titre">La prière qui agit</span>
+        <span class="semaine__ref">Jacques 5.13-20<span class="semaine__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
     </ul>
   </article>
 
