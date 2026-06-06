@@ -24,11 +24,11 @@ Enfin, la communauté visée connaissait l'épreuve, les tensions sociales et, c
 
 | Français | Translit. | Sens littéral | Champ sémantique | Traductions comparées |
 |---|---|---|---|---|
-| **prompt / lent** | _tachys / bradys_ | tachys: rapide, prompt; bradys: lent, tardif | Le couple tachys/bradys structure le triple impératif du v.19. Bradys ne recommande pas la mollesse mais une retenue délibérée: lenteur à déverser ses propres mots et lenteur à s'enflammer. La sagesse vétérotestamentaire dit la même chose (Proverbes 10.19; 15.1; 17.27-28). | _S21_ prompt à écouter, lent à parler, lent à se mettre en colère · _NEG79_ prompt à écouter, lent à parler, lent à se mettre en colère · _Darby_ prompt à écouter, lent à parler, lent à la colère · _LSG_ prompt à écouter, lent à parler, lent à se mettre en colère · _KJF_ prompt à écouter, lent à parler, lent à la colère |
-| **implantée** | _emphytos_ | implanté, inné, greffé en (de en + phyô, faire pousser) | Hapax du NT (Jacques 1.21). La Parole « implantée » est celle que Dieu a semée dans le cœur lors de la régénération (v.18); elle évoque la promesse de la nouvelle alliance où la Loi est inscrite dans le cœur (Jérémie 31.33) et fait écho à la parabole du semeur. Selon MacArthur, c'est la Parole déjà déposée par grâce, qu'il faut maintenant recevoir avec docilité. | _S21_ la parole qui a été plantée en vous · _NEG79_ la parole qui a été plantée en vous · _Darby_ la parole implantée · _LSG_ la parole qui a été plantée en vous · _KJF_ la parole greffée |
-| **mettre en pratique** | _poiêtês logou_ | poiêtês: celui qui fait, l'auteur, l'exécutant; littéralement « faiseur de parole » | Par contraste avec akroatês (l'auditeur, celui qui écoute un exposé sans s'engager). Le grec profane employait akroatês pour l'auditeur d'une conférence. Jacques oppose l'écoute passive au faire (vv.22-25), reprenant la finale du Sermon sur la montagne (Matthieu 7.24-27). Le faire n'est pas le moyen de mériter le salut mais la preuve de la foi régénérée. | _S21_ Mettez en pratique la parole et ne vous contentez pas de l'écouter · _NEG79_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _Darby_ Mais mettez la parole en pratique, et ne l'écoutez pas seulement · _LSG_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _KJF_ Mais soyez des observateurs de la parole, et non des auditeurs seulement |
-| **se séduire / se tromper soi-même** | _paralogizomai_ | tromper par un faux raisonnement, induire en erreur par un calcul fallacieux | Au v.22, l'auditeur non praticien « se trompe lui même » par un raisonnement faux. Le terme dénote l'illusion née d'un calcul spécieux: croire qu'écouter suffit. C'est l'auto tromperie de la fausse assurance, que MacArthur rattache à la fausse profession de foi dénoncée par Jésus (Matthieu 7.21-23). Voir aussi apataô, « tromper », au v.26 pour la religion vaine. | _S21_ en vous trompant vous-mêmes par de faux raisonnements · _NEG79_ en vous trompant vous-mêmes par de faux raisonnements · _Darby_ vous séduisant vous-mêmes · _LSG_ en vous trompant vous-mêmes par de faux raisonnements · _KJF_ vous trompant vous-mêmes |
-| **religion / culte** | _thrêskeia / thrêskos_ | thrêskeia: pratique religieuse extérieure, culte, dévotion; thrêskos: religieux, dévot dans l'observance | Le mot vise la religion dans sa dimension cultuelle et observable (vv.26-27), non la foi intérieure (pistis). Jacques ne réduit pas la piété à un rituel: il dit que le culte « pur et sans tache » devant Dieu se vérifie dans la langue maîtrisée, la compassion et la séparation du monde. Le terme apparaît aussi en Colossiens 2.18 et Actes 26.5. | _S21_ La religion pure et sans tache devant Dieu · _NEG79_ La religion pure et sans tache, devant Dieu · _Darby_ Le service religieux pur et sans tache devant Dieu · _LSG_ La religion pure et sans tache, devant Dieu · _KJF_ La religion pure et sans souillure devant Dieu |
+| **** | _tachys / bradys_ | tachys: rapide, prompt; bradys: lent, tardif |  | _S21_ prompt à écouter, lent à parler, lent à se mettre en colère · _NEG79_ prompt à écouter, lent à parler, lent à se mettre en colère · _Darby_ prompt à écouter, lent à parler, lent à la colère · _LSG_ prompt à écouter, lent à parler, lent à se mettre en colère · _KJF_ prompt à écouter, lent à parler, lent à la colère |
+| **** | _emphytos_ | implanté, inné, greffé en (de en + phyô, faire pousser) |  | _S21_ la parole qui a été plantée en vous · _NEG79_ la parole qui a été plantée en vous · _Darby_ la parole implantée · _LSG_ la parole qui a été plantée en vous · _KJF_ la parole greffée |
+| **** | _poiêtês logou_ | poiêtês: celui qui fait, l'auteur, l'exécutant; littéralement « faiseur de parole » |  | _S21_ Mettez en pratique la parole et ne vous contentez pas de l'écouter · _NEG79_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _Darby_ Mais mettez la parole en pratique, et ne l'écoutez pas seulement · _LSG_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _KJF_ Mais soyez des observateurs de la parole, et non des auditeurs seulement |
+| **** | _paralogizomai_ | tromper par un faux raisonnement, induire en erreur par un calcul fallacieux |  | _S21_ en vous trompant vous-mêmes par de faux raisonnements · _NEG79_ en vous trompant vous-mêmes par de faux raisonnements · _Darby_ vous séduisant vous-mêmes · _LSG_ en vous trompant vous-mêmes par de faux raisonnements · _KJF_ vous trompant vous-mêmes |
+| **** | _thrêskeia / thrêskos_ | thrêskeia: pratique religieuse extérieure, culte, dévotion; thrêskos: religieux, dévot dans l'observance |  | _S21_ La religion pure et sans tache devant Dieu · _NEG79_ La religion pure et sans tache, devant Dieu · _Darby_ Le service religieux pur et sans tache devant Dieu · _LSG_ La religion pure et sans tache, devant Dieu · _KJF_ La religion pure et sans souillure devant Dieu |
 
 ## Apports des commentateurs
 
@@ -36,45 +36,27 @@ La question interprétative centrale de la péricope est celle ci: Jacques ensei
 
 L'image du miroir (vv.23-25) porte le poids de l'argument. L'homme qui écoute la Parole sans la pratiquer ressemble à celui qui regarde son visage naturel dans un miroir, puis s'en va et oublie aussitôt ce qu'il a vu. La Parole révèle l'état réel du cœur, comme un miroir révèle le visage; mais celui qui n'en tire aucune obéissance prouve qu'il n'a fait que regarder, sans être transformé. Par contraste, celui qui « plonge les regards dans la loi parfaite, la loi de la liberté », et y persévère, sera « heureux dans son activité ». MacArthur souligne que cette « loi de la liberté » n'est pas un joug légaliste: c'est la Parole de Dieu telle qu'elle libère le croyant régénéré, à qui l'Esprit donne d'aimer et d'accomplir ce que Dieu commande (à rapprocher de Jean 8.31-32). L'obéissance n'est donc pas une contrainte imposée du dehors mais l'expression de la liberté nouvelle en Christ. Le bonheur promis n'est pas la récompense méritoire de l'effort mais la bénédiction qui accompagne la vie selon la Parole.
 
-Les versets 21 et 26 à 27 encadrent l'exhortation par deux gestes décisifs. Au verset 21, recevoir « avec douceur » (prautês) la Parole implantée suppose d'abord de « rejeter toute souillure et tout excès de malice »: la docilité à la Parole et la rupture avec le péché vont ensemble, ce qui rejoint l'insistance de MacArthur sur l'inséparabilité de la foi et de la repentance dans la conversion authentique. Au verset 26, celui qui se croit religieux mais « ne tient pas sa langue en bride » se trompe lui même, et sa religion est vaine; la langue est le baromètre infaillible du cœur, thème que Jacques 3 développera. Au verset 27, la religion pure devant Dieu se condense en deux marques: la miséricorde active envers les plus vulnérables (orphelins et veuves) et la sainteté qui « se préserve des souillures du monde ». Le commentaire de MacArthur, soutenu par la théologie du Master's Seminary, insiste pour que ces deux marques ne soient jamais lues comme une définition complète et autosuffisante de la vraie religion, mais comme des échantillons probants: là où la foi est vivante, elle produit compassion et sainteté. Couper l'une de l'autre, ou couper l'ensemble de sa racine régénératrice, serait retomber dans le moralisme que le texte interdit.
+Les versets 21 et 26 à 27 encadrent l'exhortation par deux gestes décisifs. Au verset 21, recevoir « avec douceur » (prautês) la Parole implantée suppose d'abord de « rejeter toute souillure et tout excès de malice »: la docilité à la Parole et la rupture avec le péché vont ensemble, ce qui rejoint l'insistance de MacArthur sur l'inséparabilité de la foi et de la repentance dans la conversion authentique. Au verset 26, celui qui se croit religieux mais « ne tient pas sa langue en bride » se trompe lui même, et sa religion est vaine; la langue est le baromètre infaillible du cœur, thème que Jacques 3 développera. Au verset 27, la religion pure devant Dieu se condense en deux marques: la miséricorde active envers les plus vulnérables (orphelins et veuves) et la sainteté qui « se préserve des souillures du monde ». Pour MacArthur, ces deux marques définissent positivement la forme la plus pure de la foi, celle qui se mesure à l'aune de la compassion et de l'amour (cf. Jean 13.35) autant qu'à la pureté de la conduite. Ce ne sont pas une liste exhaustive de rites mais les manifestations représentatives d'une foi vivante: là où elle est réelle, elle produit compassion et sainteté. Couper l'une de l'autre, ou couper l'ensemble de sa racine régénératrice, serait retomber dans le moralisme que le texte interdit.
 
 ## Renvois et passages parallèles
 
 **Matthieu 7.24-27** · _Lien thématique_
 
-La parabole des deux maisons conclut le Sermon sur la montagne en opposant celui qui entend les paroles de Jésus et les met en pratique à celui qui les entend sans agir; Jacques reprend directement ce contraste.
-
 **Jacques 2.14-26** · _Parallèle direct_
-
-Déploiement en argument serré du principe ici énoncé: une foi qui n'a pas d'œuvres est morte et ne peut sauver.
 
 **Deutéronome 10.18** · _Arrière-plan AT_
 
-Dieu lui même fait droit à l'orphelin et à la veuve; la religion pure de Jacques 1.27 imite le caractère du Dieu qui protège les sans pouvoir.
-
 **Jérémie 31.33** · _Arrière-plan AT_
-
-La promesse de la nouvelle alliance, où Dieu inscrit sa loi dans le cœur, éclaire la « parole implantée » (emphytos) du v.21.
 
 **Romains 2.13** · _Lien thématique_
 
-Paul affirme lui aussi que ce ne sont pas les auditeurs de la loi qui sont justes, mais ceux qui la mettent en pratique; convergence entre Paul et Jacques sur l'écoute stérile.
-
 **1 Jean 1.6; 2.4** · _Lien thématique_
-
-Jean applique le même test: prétendre connaître Dieu tout en désobéissant, c'est mentir; la profession sans obéissance est une auto tromperie.
 
 **Jacques 3.1-12** · _Parallèle direct_
 
-Le contrôle de la langue, marque de la vraie religion au v.26, devient le sujet développé du chapitre 3.
-
 **Proverbes 17.27-28** · _Arrière-plan AT_
 
-La sagesse vétérotestamentaire commande déjà la retenue de la parole et la lenteur à la colère que reprend Jacques 1.19-20.
-
 ## Thèmes théologiques
-
-### La suffisance et la puissance régénératrice de la Parole
 
 **Dans le texte**
 
@@ -84,8 +66,6 @@ La Parole « implantée » peut « sauver les âmes » (v.21); elle est le miroi
 
 Pour une assemblée tentée de chercher la transformation ailleurs (expériences, techniques, programmes), le texte recentre tout sur la Parole reçue avec docilité. C'est l'Esprit qui, par elle, régénère et sanctifie; la confiance du croyant repose sur la suffisance de l'Écriture, non sur ses propres ressources.
 
-### La foi vivante prouvée par les œuvres
-
 **Dans le texte**
 
 Être « praticien » et non seulement « auditeur » (v.22); la religion pure se voit dans la langue maîtrisée, la compassion et la sainteté (vv.26-27).
@@ -93,8 +73,6 @@ Pour une assemblée tentée de chercher la transformation ailleurs (expériences
 **Pour votre assemblée**
 
 Selon la doctrine de la persévérance des saints, la foi authentique porte du fruit. L'assemblée est appelée non à mériter le salut par ses œuvres, mais à vérifier la réalité de sa foi par une vie transformée. L'absence totale de fruit doit alarmer; sa présence rassure, sans jamais devenir une base de fierté.
-
-### L'auto tromperie religieuse
 
 **Dans le texte**
 
@@ -104,8 +82,6 @@ L'auditeur non praticien « se trompe lui même » (v.22); celui qui ne bride pa
 
 Le plus grand danger n'est pas l'incrédulité avouée mais la fausse assurance. Le texte oblige chacun à s'examiner: ma religion est elle culte extérieur ou foi qui obéit? Cette mise en garde reprend l'avertissement de Jésus contre ceux qui disent « Seigneur, Seigneur » sans faire la volonté du Père (Matthieu 7.21-23).
 
-### La repentance inséparable de la réception de la Parole
-
 **Dans le texte**
 
 Recevoir la Parole « avec douceur » suppose de « rejeter toute souillure et tout excès de malice » (v.21).
@@ -113,8 +89,6 @@ Recevoir la Parole « avec douceur » suppose de « rejeter toute souillure et t
 **Pour votre assemblée**
 
 La docilité à la Parole et la rupture avec le péché sont un seul mouvement. Conformément à l'enseignement sur le salut de seigneurie, on ne reçoit pas le Christ sans se détourner du péché; la foi et la repentance ne se séparent pas. L'assemblée apprend que recevoir la Parole n'est jamais neutre: cela exige un cœur qui se dépouille.
-
-### La sainteté pratique: compassion et séparation du monde
 
 **Dans le texte**
 

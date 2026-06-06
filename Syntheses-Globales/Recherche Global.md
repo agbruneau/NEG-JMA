@@ -34,13 +34,13 @@ Trois détails échappent au lecteur moderne mais sautaient aux yeux des premier
 
 La grande question de l'épître se loge en 2.14-26 : Jacques contredit-il Paul sur la justification? John MacArthur répond, avec toute la tradition réformée, que les deux apôtres sont complémentaires et non contradictoires. Paul traite de la manière dont un pécheur est déclaré juste devant Dieu : par la foi seule, sans les œuvres (Romains 3.28; Éphésiens 2.8-9). Jacques traite de la nature de la foi qui justifie : une foi vivante ne reste jamais seule, elle produit des œuvres. Sa cible n'est pas la foi, mais la « foi morte », la foi purement intellectuelle des démons qui « croient et tremblent » (2.19). La formule de MacArthur résume l'enjeu : la foi seule sauve, mais la foi qui sauve n'est jamais seule. Jacques est ici le grand adversaire du « croire facile » et l'allié de la prédication du Christ comme Seigneur.
 
-Calvin avait déjà dénoué la tension en distinguant les sens du verbe « justifier ». Quand Jacques dit qu'Abraham fut « justifié par les œuvres » en offrant Isaac (2.21), il ne parle pas, comme Paul, de l'imputation forensique par laquelle Dieu déclare juste, mais de la manifestation, de la démonstration de cette justice déjà reçue. Genèse 15.6, « il crut, et cela lui fut compté comme justice » (cité en 2.23), précède de plusieurs décennies le sacrifice de Genèse 22 : l'œuvre n'a pas produit la foi, elle l'a prouvée et menée à sa perfection (2.22). Selon Calvin, nous sommes justifiés par la foi seule, mais la foi qui justifie n'est jamais seule. La Confession de foi baptiste de 1689 dit exactement la même chose : la foi est le seul instrument de la justification, et pourtant « elle n'est jamais seule dans la personne justifiée, mais elle est toujours accompagnée de toutes les autres grâces salvatrices; ce n'est pas une foi morte, mais une foi qui agit par l'amour » (1689, chapitre 11.2).
+Calvin avait déjà dénoué la tension en distinguant les sens du verbe « justifier ». Quand Jacques dit qu'Abraham fut « justifié par les œuvres » en offrant Isaac (2.21), il ne parle pas, comme Paul, de l'imputation forensique par laquelle Dieu déclare juste, mais de la manifestation, de la démonstration de cette justice déjà reçue. Genèse 15.6, « il crut, et cela lui fut compté comme justice » (cité en 2.23), précède de plusieurs décennies le sacrifice de Genèse 22 : l'œuvre n'a pas produit la foi, elle l'a prouvée et menée à sa perfection (2.22). Selon Calvin, nous sommes justifiés par la foi seule, mais la foi qui justifie n'est jamais seule. La tradition réformée dont MacArthur se réclame dit la même chose : la foi est le seul instrument de la justification, et pourtant elle n'est jamais seule dans la personne justifiée, mais toujours accompagnée des autres grâces salvatrices; ce n'est pas une foi morte, mais une foi qui agit par l'amour.
 
 Il faut nommer honnêtement la méfiance de Luther, qui qualifia un jour Jacques d'« épître de paille » parce qu'il la croyait en conflit avec l'évangile paulinien. La tradition réformée n'a pas suivi Luther sur ce point : Calvin, les puritains et les confessions ont reçu pleinement Jacques comme Écriture inspirée et l'ont harmonisé avec Paul. Galates 5.6, sous la plume même de Paul, « la foi agissant par l'amour », dit en une phrase tout le propos de Jacques.
 
 Trois autres points méritent l'attention du prédicateur. D'abord, 1.13 : « Dieu ne tente personne. » Dieu ordonne souverainement les épreuves (1.2) sans jamais être l'auteur de la sollicitation au péché, qui vient de notre propre convoitise (1.14); la sainteté de Dieu et la responsabilité de l'homme tiennent ensemble. Ensuite, 3.8 : la langue est « un mal qu'on ne peut maîtriser ». Prêcher le chapitre 3 comme une simple liste de conseils pour mieux parler, c'est trahir le texte : l'impossibilité de dompter la langue par l'effort renvoie au cœur qui doit être renouvelé et à la grâce qui seule transforme la parole. Enfin, 5.14-15, l'onction d'huile et la « prière de la foi » : la lecture réformée et cessationniste y voit non pas le don miraculeux de guérison ni l'extrême-onction romaine, mais un soin pastoral ordinaire. L'huile est médicinale ou symbolique, la guérison demeure soumise à la volonté souveraine de Dieu, et « la prière de la foi » est la confiance en cette volonté, non une formule garantissant la santé selon l'évangile de la prospérité.
 
-Sur l'eschatologie, l'épître reste sobre, mais 5.7-9 annonce que « l'avènement du Seigneur est proche » et que « le juge se tient à la porte ». MacArthur lira ce retour dans son cadre dispensationaliste et prémillénariste, voyant aussi dans « les douze tribus » (1.1) des croyants juifs au destin distinct. La tradition confessionnelle de 1689, largement amillénariste et covenantale, lira la même imminence du retour de Christ sans cet échafaudage, et verra dans la dispersion l'image du peuple de la nouvelle alliance. Le prédicateur gagnera à mener avec la lecture qui retient l'imminence et la responsabilité, tout en signalant honnêtement que la divergence existe.
+Sur l'eschatologie, l'épître reste sobre, mais 5.7-9 annonce que « l'avènement du Seigneur est proche » et que « le juge se tient à la porte ». MacArthur lit ce retour comme la seconde venue personnelle et littérale de Christ (renvoyant à Matthieu 24), dans son cadre dispensationaliste et prémillénariste : il y joint la distinction permanente entre Israël et l'Église, voyant dans « les douze tribus » (1.1) de véritables croyants juifs au destin distinct, et l'attente d'un enlèvement de l'Église avant la grande tribulation. Pour MacArthur, ce prémillénarisme n'est pas une option parmi d'autres, mais le fruit d'une herméneutique grammatico-historique tenue jusqu'au bout. C'est cette imminence et cette responsabilité que le prédicateur prêchera, sans spiritualiser les promesses faites à Israël.
 
 ## Renvois et passages parallèles
 
@@ -82,7 +82,7 @@ Abraham crut et cela lui fut compté comme justice (15.6, cité en 2.23); l'offr
 
 **Dans le texte**
 
-Le cœur de l'épître (2.14-26), précédé déjà de 1.22-25 : il faut être « praticien de la parole », non auditeur seulement. Une foi sans œuvres est morte (2.17,26); les démons eux-mêmes ont une foi orthodoxe et tremblent (2.19); Abraham et Rahab prouvent que la foi véritable agit. Cadre dogmatique : sotériologie, justification par la foi seule (sola fide); 1689, chapitres 11 et 16.
+Le cœur de l'épître (2.14-26), précédé déjà de 1.22-25 : il faut être « praticien de la parole », non auditeur seulement. Une foi sans œuvres est morte (2.17,26); les démons eux-mêmes ont une foi orthodoxe et tremblent (2.19); Abraham et Rahab prouvent que la foi véritable agit. Cadre dogmatique : sotériologie, justification par la foi seule (sola fide); cf. Biblical Doctrine (MacArthur et Mayhue).
 
 **Pour votre assemblée**
 
@@ -92,7 +92,7 @@ Pour une assemblée tentée par le « croire facile », ce texte appelle à exam
 
 **Dans le texte**
 
-« Regardez comme un sujet de joie complète les diverses épreuves » (1.2) : l'épreuve éprouve la foi, produit la persévérance, et la persévérance mène à la maturité (1.3-4); celui qui tient bon reçoit « la couronne de vie » (1.12). Cadre dogmatique : la providence, par laquelle Dieu ordonne souverainement l'épreuve pour sanctifier (Romains 8.28-29), et la persévérance des saints; 1689, chapitre 5.
+« Regardez comme un sujet de joie complète les diverses épreuves » (1.2) : l'épreuve éprouve la foi, produit la persévérance, et la persévérance mène à la maturité (1.3-4); celui qui tient bon reçoit « la couronne de vie » (1.12). Cadre dogmatique : la providence, par laquelle Dieu ordonne souverainement l'épreuve pour sanctifier (Romains 8.28-29), et la persévérance des saints; cf. Biblical Doctrine (MacArthur et Mayhue).
 
 **Pour votre assemblée**
 
@@ -102,7 +102,7 @@ Pour les membres éprouvés, Jacques ne banalise pas la douleur : il en révèle
 
 **Dans le texte**
 
-Dieu donne la sagesse « simplement et sans reproche » à qui la demande (1.5); « tout don parfait descend du Père des lumières, chez qui il n'y a ni changement ni ombre de variation » (1.17); la vie n'est qu'« une vapeur », et tout projet se dit « si le Seigneur le veut » (4.13-16). Cadre dogmatique : théologie propre (souveraineté et immutabilité de Dieu), sola gratia; 1689, chapitres 2, 3 et 5.
+Dieu donne la sagesse « simplement et sans reproche » à qui la demande (1.5); « tout don parfait descend du Père des lumières, chez qui il n'y a ni changement ni ombre de variation » (1.17); la vie n'est qu'« une vapeur », et tout projet se dit « si le Seigneur le veut » (4.13-16). Cadre dogmatique : théologie propre (souveraineté et immutabilité de Dieu), sola gratia; cf. Biblical Doctrine (MacArthur et Mayhue).
 
 **Pour votre assemblée**
 
@@ -122,7 +122,7 @@ Les péchés de la langue, médisance, querelle, jugement du frère (4.11), ne s
 
 **Dans le texte**
 
-Jacques condamne la partialité qui flatte le riche et humilie le pauvre dans l'assemblée (2.1-13), dénonce « l'amitié du monde » comme « inimitié contre Dieu » (4.4), et prononce un « malheur » prophétique sur les riches oppresseurs (5.1-6). Le remède : « il accorde une grâce d'autant plus grande... Dieu résiste aux orgueilleux, mais il fait grâce aux humbles » (4.6; Proverbes 3.34). Cadre dogmatique : sanctification et antithèse entre le monde et Dieu; 1689, chapitre 13.
+Jacques condamne la partialité qui flatte le riche et humilie le pauvre dans l'assemblée (2.1-13), dénonce « l'amitié du monde » comme « inimitié contre Dieu » (4.4), et prononce un « malheur » prophétique sur les riches oppresseurs (5.1-6). Le remède : « il accorde une grâce d'autant plus grande... Dieu résiste aux orgueilleux, mais il fait grâce aux humbles » (4.6; Proverbes 3.34). Cadre dogmatique : sanctification et antithèse entre le monde et Dieu; cf. Biblical Doctrine (MacArthur et Mayhue).
 
 **Pour votre assemblée**
 
