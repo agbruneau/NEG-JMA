@@ -135,7 +135,8 @@ conformité** de tout le contenu.
 
 ```
 Biblique/
-  README.md  CLAUDE.md
+  README.md  CLAUDE.md  AuditPlan.md
+  LisezMoi.pdf                 export PDF du README (Lisez-moi), pour diffusion hors dépôt
   00 - Avant-propos/            Fondations du dépôt
     NEG - MacArthur.pdf         La Bible d'étude MacArthur (NEG, 2216 p.) : RÉFÉRENCE de conformité (AT + NT)
     Confession de foi-EBC.pdf   Confession de foi de l'Église (rév. 2016)
